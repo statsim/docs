@@ -5,10 +5,10 @@ from __future__ import unicode_literals
 AUTHOR = u'Anton Zemlyansky'
 SITENAME = u'StatSim Documentation'
 SITEURL = ''
+LOCALE = 'en_US.UTF-8'
 
 PATH = 'content'
 OUTPUT_PATH = 'docs'
-STATIC_PATHS = ['img']
 
 TIMEZONE = 'Europe/Paris'
 
@@ -32,13 +32,16 @@ SOCIAL = (('Twitter', 'https://twitter.com/statsimcom'),
           ('Github', 'https://github.com/statsim'))
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup']
-
+PLUGINS = ['i18n_subsites', 'ipynb.markup']
+I18N_SUBSITES = {
+  'ru': {
+    'SITENAME': 'Справочник StatSim'
+  }
+}
 THEME = 'themes/pelican-blue'
 DISPLAY_FOOTER = False
 DISPLAY_SUMMARY = True
 ARTICLE_ORDER_BY = 'filename'
-
 DEFAULT_PAGINATION = False
 
 IGNORE_FILES = ['*-checkpoint.ipynb', '*.md', '*.html']

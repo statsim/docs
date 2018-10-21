@@ -40,7 +40,6 @@ h1, h2 {
 {
   margin-top: 50px;
   margin-bottom: 50px;
-  text-align: justify;
   color: #333;
 }
 
@@ -61,9 +60,16 @@ body {margin: 0}
 body > article, footer {
   line-height: 1.6em;
   display: block;
-  max-width: 700px;
-  margin: 40px auto auto 355px;
+  max-width: 930px;
+  margin: 40px auto auto 285px;
   padding: 20px 80px 10px;
+}
+
+body .input, body .prompt {
+  display: none !important;
+}
+div.output_subarea {
+  max-width: 100% !important;
 }
 
 article ol.posts
