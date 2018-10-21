@@ -1,94 +1,5 @@
-<!doctype html>
-<html lang="ru" itemscope itemtype="http://schema.org/Person">
-<head>
-            <meta charset="utf-8">
-        <!-- Site Meta Data -->
-        <title>Notebook using internal metadata</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="Anton Zemlyansky">
-
-        <link rel="shortcut icon" href="">
-
-        <!-- schema.org -->
-        <meta itemprop="name" content="Справочник StatSim">
-        <meta itemprop="image" content="">
-        <meta itemprop="description" content="">
-
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-        <!-- Style Meta Data -->
-        <link rel="stylesheet" href="/ru/../theme/css/style.css" type="text/css"/>
-        <link rel="stylesheet" href="/ru/../theme/css/pygments.css" type="text/css"/>
-
-        <!-- Feed Meta Data -->
-
-        <!-- Twitter Feed -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="">
-        <meta name="twitter:image" content="">
-
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="/ru/with-metadata.html">
-    <meta name="twitter:title" content="Справочник StatSim ~ Notebook using internal metadata">
-    <meta name="twitter:description" content="">
-
-    <!-- Facebook Meta Data -->
-    <meta property="og:title" content="Справочник StatSim ~ Notebook using internal metadata"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:image" content=""/>
-</head>
-
-<body>
-<!-- Sidebar -->
-<aside>
-    <img src="/ru/../theme/images/statsim-logo.png" style="width: 130px">
-    <!--<center><a href="/ru"><img id="avatar" src=""></a></center>-->
-    <h1>Справочник StatSim</h1>
-    <a href="/ru/../theme/../">English</>
-    <br>
-    <a href="/ru/../theme/../ru/">Russian</>
-    <br>
-
-
-    <nav class="nav">
-        <ul class="list-bare">
-
-
-
-        </ul>
-    </nav>
-
-    <p class="social">
-                <a href="https://twitter.com/statsimcom" target="_blank"><img
-                        src="/ru/../theme/images/icons/twitter.png"></a>
-                <a href="https://www.facebook.com/statsim" target="_blank"><img
-                        src="/ru/../theme/images/icons/facebook.png"></a>
-                <a href="https://github.com/statsim" target="_blank"><img
-                        src="/ru/../theme/images/icons/github.png"></a>
-    </p>
-
-        <h2>Categories</h2>
-        <ul class="navbar">
-                <li class="active"><a
-                        href="/ru/category/category.html">Category</a></li>
-        </ul>
-
-        <h2 class="blog_roll_link"><br/>LINKS</h2>
-        <ul class="navbar">
-                <li><a href="https://statsim.com/">StatSim</a></li>
-                <li><a href="https://analyze.li">Analyze.li</a></li>
-        </ul>
-
-</aside>
-
-<!-- Content -->
-<article>
-    <section id="content">
-        <article>
-            <h2 class="post_title post_detail"><a href="/ru/with-metadata.html" rel="bookmark"
-                                                  title="Permalink to Notebook using internal metadata">Notebook using internal metadata</a></h2>
-            <div class="entry-content blog-post">
-                <style type="text/css">/*!
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>StatSim Documentation - Modeling</title><link href="https://statsim.com/docs/" rel="alternate"></link><link href="https://statsim.com/docs/feeds/modeling.atom.xml" rel="self"></link><id>https://statsim.com/docs/</id><updated>2018-10-21T20:00:00+02:00</updated><entry><title>Models and Projects</title><link href="https://statsim.com/docs/models.html" rel="alternate"></link><published>2018-10-21T20:00:00+02:00</published><updated>2018-10-21T20:00:00+02:00</updated><author><name>Anton Zemlyansky</name></author><id>tag:statsim.com,2018-10-21:/docs/models.html</id><summary type="html">&lt;p&gt;Introduction to StatSim models&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -450,7 +361,7 @@ div.unrecognized_cell .inner_cell a:hover {
   text-decoration: none;
 }
 @media (max-width: 540px) {
-  div.unrecognized_cell > div.prompt {
+  div.unrecognized_cell &gt; div.prompt {
     display: none;
   }
 }
@@ -503,19 +414,19 @@ div.input_prompt {
   color: #303F9F;
   border-top: 1px solid transparent;
 }
-div.input_area > div.highlight {
+div.input_area &gt; div.highlight {
   margin: 0.4em;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-div.input_area > div.highlight > pre {
+div.input_area &gt; div.highlight &gt; pre {
   margin: 0px;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-/* The following gets added to the <head> if it is detected that the user has a
+/* The following gets added to the &lt;head&gt; if it is detected that the user has a
  * monospace font with inconsistent normal/bold/italic height.  See
  * notebookmain.js.  Such fonts will have keywords vertically offset with
  * respect to the rest of the text.  The user should select a better font.
@@ -576,7 +487,7 @@ div.input_area > div.highlight > pre {
 }
 /*
 
-Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
 Adapted from GitHub theme
 
 */
@@ -820,7 +731,7 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
-div.output_area .mglyph > img {
+div.output_area .mglyph &gt; img {
   max-width: none;
 }
 /* This is needed to protect the pre formating from global settings such
@@ -1058,7 +969,7 @@ div.text_cell {
   align-items: stretch;
 }
 @media (max-width: 540px) {
-  div.text_cell > div.prompt {
+  div.text_cell &gt; div.prompt {
     display: none;
   }
 }
@@ -1130,8 +1041,8 @@ h6:hover .anchor-link {
   font-size: 100%;
   font-style: italic;
 }
-</style>
-<style type="text/css">.highlight .hll { background-color: #ffffcc }
+&lt;/style&gt;
+&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
@@ -1195,8 +1106,8 @@ h6:hover .anchor-link {
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
-<style type="text/css">
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
+&lt;style type="text/css"&gt;
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -1232,90 +1143,117 @@ h6:hover .anchor-link {
 .ansi-white-intense-bg { background-color: #A1A6B2; }
 
 .ansi-bold { font-weight: bold; }
-</style><body>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
-</pre></div>
+&lt;/style&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;open&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;./open&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-    </div>
-</div>
-</div>
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>StatSim</em> is a multipurpose app. It wraps <a href="http://webppl.org/">WebPPL</a>, a probabilistic programming language, in a user-friendly graphical interface based on <a href="https://vuejs.org/">Vue.js</a> and a couple of additional libraries. StatSim can be used to create basic programs, however its main purpose is probabilistic simulations and modeling.</p>
-<p>Let's open a simple example that just sums two variables <em>x</em> and <em>y</em> and displays results:</p>
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;blockquote&gt;&lt;p&gt;"All models are wrong but some are useful"&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Models describe relationship between variables and how output is generated. A statistical model represents data generation process that generally approximates some real-life phenomena. Creating models in StatSim is like programming in the browser. Or strictly speaking &lt;a href="https://en.wikipedia.org/wiki/Probabilistic_programming_language"&gt;probabilistic programming&lt;/a&gt; in the browser.&lt;/p&gt;
+&lt;p&gt;A new model 'Main' is initialized automatically when you create a new project or fresh-start the app. Usually you need only one model in the project. However each StatSim project can include multiple models. It's possible to call one model from another dividing the project in logical parts connected between each other.&lt;/p&gt;
+&lt;p&gt;Models inputs are declared as data blocks with "Use as parameter checkbox" activated. Such parameters can be used later when calling the model as a function or using it as a probability distribution.&lt;/p&gt;
+&lt;p&gt;If a model returns a scalar value in &lt;code&gt;Determinstic&lt;/code&gt; simulation it behaves as a function when called from another place. To create a new model, find a small icon with three dots &lt;code&gt;⦁ ⦁ ⦁&lt;/code&gt; just near the current model tab.  Example of two models, one of them called &lt;code&gt;lin&lt;/code&gt; behaves as a linear function that takes &lt;code&gt;x&lt;/code&gt;, and returns a &lt;code&gt;a * x + b&lt;/code&gt;. Then it's called from the main model as a function.&lt;/p&gt;
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
-</pre></div>
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="nx"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-    </div>
-</div>
-</div>
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
+&lt;div class="output_area"&gt;
 
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
+    &lt;div class="prompt output_prompt"&gt;Out[2]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+
+    &lt;iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"&gt;&lt;/iframe&gt;&lt;br&gt;
+    &lt;a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0"&gt;Open in StatSim&lt;/a&gt;
   
-</div>
+&lt;/div&gt;
 
-</div>
+&lt;/div&gt;
 
-</div>
-</div>
+&lt;/div&gt;
+&lt;/div&gt;
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>There are 2 key areas of the StatSim window: block stack on the left and preview with results on the right. To actually build a model use the left part. Each model (program) consists of building blocks. Our new simple program just sums two variables and displays results. What we need is two data blocks for each input variable and one expression block that describes a formula: <code>x + y</code>.</p>
-<p>Data blocks can be used as inner, hidden constants or model inputs (model parameters). That determines if the corresponding input element is shown in preview mode and when compiled to system binaries.</p>
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Other simulation methods make models to be exported as probability distributions. Such distributions will be automatically loaded in a list of default distributions in Random Variable blocks of other models.&lt;/p&gt;
+&lt;p&gt;Lets change how lin model behaves and instead of return scalar &lt;code&gt;a * x + b&lt;/code&gt; return a gaussian distribution centered around &lt;code&gt;a * x + b&lt;/code&gt; with a standard deviation equal to &lt;code&gt;x / 2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Be careful with creating many interconnected probabilistic models. Number of samples to be generated grows exponentially.&lt;/p&gt;
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre>
-</pre></div>
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="nx"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-    </div>
-</div>
-</div>
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-</div>
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+
+    &lt;iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D" width="900" height="600"&gt;&lt;/iframe&gt;&lt;br&gt;
+    &lt;a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D" style="margin: 20px 0"&gt;Open in StatSim&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
  
 
-</body>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
@@ -1342,57 +1280,5 @@ h6:hover .anchor-link {
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script>
-
-            </div>
-            <div class="post_list">
-                <span>By </span>
-                <a href="/ru/author/me.html">@Me</a>
-                <span> in </span>
-                <span class="post_category"><a href="/ru/category/category.html" rel="bookmark"
-                                               title="Permalink to Category">[ Category ]</a></span>
-                <span class="post_date">Fri 31 December 2100</span>
-                <div><span>Tags : </span>
-                            <span><a href="/ru/tag/tag1.html">#tag1, </a></span>
-                            <span><a href="/ru/tag/tag2.html">#tag2, </a></span>
-                </div>
-
-                <div class="entry-social">
-                    <span class="twitter"><a target="_blank" rel="nofollow"
-                                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"
-                                             title="Twitter"
-                                             href="https://twitter.com/share?url=/ru/with-metadata.html&text=Notebook using internal metadata&via="><img
-                            src="/ru/theme/images/icons/twitter-s.png"></a></span>
-
-                    <span class="gplus"><a target="_blank" title="Google +"
-                                           href="https://plus.google.com/share?url=/ru/with-metadata.html&hl=fr"
-                                           rel="nofollow"
-                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
-                            src="/ru/theme/images/icons/google-s.png"></a></span>
-
-                    <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow"
-                                              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"
-                                              href="https://www.facebook.com/sharer.php?u=/ru/with-metadata.html&t=Notebook using internal metadata"><img
-                            src="/ru/theme/images/icons/facebook-s.png"></a></span>
-
-                    <a target="_blank" title="Linkedin"
-                       href="https://www.linkedin.com/shareArticle?mini=true&url=/ru/with-metadata.html&title=Notebook using internal metadata"
-                       rel="nofollow"
-                       onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
-                            src="/ru/theme/images/icons/linkedin-s.png"></a>
-
-                    <span class="mail"><a
-                            href="mailto:?subject=Notebook using internal metadata&amp;body=Viens découvrir un article à propos de [Notebook using internal metadata] sur le site de Anton Zemlyansky. /ru/with-metadata.html"
-                            title="Share by Email" target="_blank"><img
-                            src="/ru/theme/images/icons/mail-s.png"></a></span>
-                </div>
-            </div>
-        </article>
-    </section>
-</article>
-
-<!-- Footer -->
-
-
-</body>
-</html>
+&lt;/script&gt;
+</content></entry></feed>
