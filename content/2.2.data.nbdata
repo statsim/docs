@@ -4,4 +4,4 @@ Lang: en
 Date: 2018-10-23 20:00
 Category: Modeling
 Author: Anton Zemlyansky
-Summary: Working with data blocks
+Summary: How to load data into a model, edit it using a table view, use data as a model input, as a constant, show it in output and analyze results
