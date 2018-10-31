@@ -1,7 +1,7 @@
-Title: Expressions
+Title: 2.3 Expressions
 Slug: expressions
 Lang: en
 Date: 2018-10-27 20:00
-Category: Modeling
+Category: Deterministic models
 Author: Anton Zemlyansky
 Summary: Make calculations with expression blocks, process arrays and tensors, conditional expressions, JavaScript.
