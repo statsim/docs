@@ -3,7 +3,7 @@
 <head>
             <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>Overview</title>
+        <title>2.4 Iterations and accumulators</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Anton Zemlyansky">
@@ -30,13 +30,13 @@
         <meta name="twitter:image" content="">
 
     <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/ru/overview.html">
-    <meta name="twitter:title" content="Справочник StatSim ~ Overview">
-    <meta name="twitter:description" content="Обзор">
+    <meta name="twitter:url" content="https://statsim.com/docs/ru/drafts/accumulators-en.html">
+    <meta name="twitter:title" content="Справочник StatSim ~ 2.4 Iterations and accumulators">
+    <meta name="twitter:description" content="Create models that change in time, accumulate values, track changes with time-series charts.">
 
     <!-- Facebook Meta Data -->
-    <meta property="og:title" content="Справочник StatSim ~ Overview"/>
-    <meta property="og:description" content="Обзор"/>
+    <meta property="og:title" content="Справочник StatSim ~ 2.4 Iterations and accumulators"/>
+    <meta property="og:description" content="Create models that change in time, accumulate values, track changes with time-series charts."/>
     <meta property="og:image" content=""/>
 </head>
 
@@ -75,7 +75,7 @@
 
         <h2>Categories</h2>
         <ul class="navbar">
-                <li class="active"><a
+                <li><a
                         href="https://statsim.com/docs/ru/category/overview.html">Overview</a></li>
         </ul>
 
@@ -92,11 +92,11 @@
     <section id="content">
         <article>
             <h2 class="post_title post_detail">
-              Overview
+              2.4 Iterations and accumulators
             </h2>
             <div class="entry-content blog-post">
               <div class="post-summary">
-                <p>Обзор</p>
+                <p>Create models that change in time, accumulate values, track changes with time-series charts.</p>
               </div>
               <style type="text/css">/*!
 *
@@ -1245,7 +1245,7 @@ h6:hover .anchor-link {
 </style>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
@@ -1259,90 +1259,44 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>StatSim</em> is a multipurpose app. It wraps <a href="http://webppl.org/">WebPPL</a>, a probabilistic programming language, in a user-friendly graphical interface based on <a href="https://vuejs.org/">Vue.js</a> and a couple of additional libraries. StatSim can be used to create basic programs, however its main purpose is probabilistic simulations and modeling.</p>
-<p>Let's open a simple example that just sums two variables <em>x</em> and <em>y</em> and displays results:</p>
+<p>In previous posts we examined two basic types of StatSim blocks. Data and Expressions. They alone are quite powerful elements that make it possible to create sophisticated models. However real-life processes are often time-dependent and it's just impossible to simplify them to the <code>input &gt; expression &gt; output</code> model. If something changes in time, accumulates values and you need to track such changes use accumulators and iterations.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
-  
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are 2 key areas of the StatSim window: block stack on the left and preview with results on the right. To actually build a model use the left part. Each model (program) consists of building blocks. Our new simple program just sums two variables and displays results. What we need is two data blocks for each input variable and one expression block that describes a formula: <code>x + y</code>.</p>
-<p>Data blocks can be used as inner, hidden constants or model inputs (model parameters). That determines if the corresponding input element is shown in preview mode and when compiled to system binaries.</p>
+<h2 id="Iterations">Iterations<a class="anchor-link" href="#Iterations">&#182;</a></h2><p>Before creating the accumulator block, it's better to set number of iterations first. Think about the smallest time step in your future model and then set <code>Iterations</code> field to the total number of such time steps. It could be number of minutes, days, months or else. By default, the number of iterations a model makes is set to <code>1</code>. You can find the <code>Iterations</code> input field on bottom of the screen or in the parameter sidebar.</p>
+<p>When the iteration value is larger than 1, an extra hidden variable <code>_i</code> is added to the model. Underscore shows that it's a hidden, not user-created value. It's possible to use this variable in time-dependent expression.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-    <iframe src="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
-  
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tracking-history">Tracking history<a class="anchor-link" href="#Tracking-history">&#182;</a></h2><p>In evolving models it's useful to track changes in time, not just get the final value. To track changes of an expression value select <code>Track history</code> checkbox.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Accumulators">Accumulators<a class="anchor-link" href="#Accumulators">&#182;</a></h2><p>Accumulator blocks do just one simple thing, they accumulate a value with each iteration. The main difference between accumulator and expression is that expressions are evaluated with each step and ignore previous values. Accumulators also evaluate their formulas, but add the result to a previous value. They also have initial value fields and min/max fields.
+Accumulators by default return only the final value for the last iteration, but you can examine all the steps by activating 'Track history' checkbox</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example:-3-years-of-home-renting">Example: 3 years of home renting<a class="anchor-link" href="#Example:-3-years-of-home-renting">&#182;</a></h2><p>Let's create a simplified model of home renting with</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1392,14 +1346,14 @@ h6:hover .anchor-link {
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/ru/author/anton-zemlianskii.html">Антон Землянский</a>
+                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky.html">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/ru/category/overview.html" rel="bookmark" title="Permalink to Overview">
-                    Overview
+                  <a href="https://statsim.com/docs/ru/category/deterministic-models.html" rel="bookmark" title="Permalink to Deterministic models">
+                    Deterministic models
                   </a>
                 </span>
-                <p class="post_date">Sat 15 September 2018</p>
+                <p class="post_date">Sat 27 October 2018</p>
             </div>
         </article>
     </section>

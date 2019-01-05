@@ -44,6 +44,7 @@ DISPLAY_SUMMARY = True
 ARTICLE_ORDER_BY = 'filename'
 DEFAULT_PAGINATION = False
 
+DELETE_OUTPUT_DIRECTORY = True
 IGNORE_FILES = ['*-checkpoint.ipynb', '*.md', '*.html']
 
 # Uncomment following line if you want document-relative URLs when developing

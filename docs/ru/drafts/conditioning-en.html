@@ -3,7 +3,7 @@
 <head>
             <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>Overview</title>
+        <title>3.3 Conditioning</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Anton Zemlyansky">
@@ -30,13 +30,13 @@
         <meta name="twitter:image" content="">
 
     <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/ru/overview.html">
-    <meta name="twitter:title" content="Справочник StatSim ~ Overview">
-    <meta name="twitter:description" content="Обзор">
+    <meta name="twitter:url" content="https://statsim.com/docs/ru/drafts/conditioning-en.html">
+    <meta name="twitter:title" content="Справочник StatSim ~ 3.3 Conditioning">
+    <meta name="twitter:description" content="Conditional probability, conditional distributions, rejecting specific samples">
 
     <!-- Facebook Meta Data -->
-    <meta property="og:title" content="Справочник StatSim ~ Overview"/>
-    <meta property="og:description" content="Обзор"/>
+    <meta property="og:title" content="Справочник StatSim ~ 3.3 Conditioning"/>
+    <meta property="og:description" content="Conditional probability, conditional distributions, rejecting specific samples"/>
     <meta property="og:image" content=""/>
 </head>
 
@@ -75,7 +75,7 @@
 
         <h2>Categories</h2>
         <ul class="navbar">
-                <li class="active"><a
+                <li><a
                         href="https://statsim.com/docs/ru/category/overview.html">Overview</a></li>
         </ul>
 
@@ -92,11 +92,11 @@
     <section id="content">
         <article>
             <h2 class="post_title post_detail">
-              Overview
+              3.3 Conditioning
             </h2>
             <div class="entry-content blog-post">
               <div class="post-summary">
-                <p>Обзор</p>
+                <p>Conditional probability, conditional distributions, rejecting specific samples</p>
               </div>
               <style type="text/css">/*!
 *
@@ -1259,8 +1259,58 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>StatSim</em> is a multipurpose app. It wraps <a href="http://webppl.org/">WebPPL</a>, a probabilistic programming language, in a user-friendly graphical interface based on <a href="https://vuejs.org/">Vue.js</a> and a couple of additional libraries. StatSim can be used to create basic programs, however its main purpose is probabilistic simulations and modeling.</p>
-<p>Let's open a simple example that just sums two variables <em>x</em> and <em>y</em> and displays results:</p>
+<p>In previous chapters we describe how to build probabilistic models using blocks of random variables. Such models provide us a way to reason about real-life processes and events in a forward direction, starting with a random unknown input going to the results we can process and analyze. StatSim thanks to WebPPL, a probabilistic language it based on, makes it possible to reason in backward direction. Knowing something about the results, get a distribution of variables it based. Broadly speaking it's a csituation when we have partial information about the model or assume it and try to figure out distribution of still unknown quantities.</p>
+<p>Conditional probability is one of the most important parts of probability theory. It provides us a way to reason about probabilistic models under the condition of having partial information about them.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conditional-probability">Conditional probability<a class="anchor-link" href="#Conditional-probability">&#182;</a></h2><p>To understand properly what conditional probability means, we should start with 3 things:</p>
+<ol>
+<li>Sample space $\mathbb{S}$ with a total probability of $1$ is all possible outcomes experiment can have</li>
+<li>Two mutually inclusive events $A$ and $B$ (mutually inclusive events can overlap or in other words happen in the same time)</li>
+<li>Event $A \cap B$ (intersection of events, or in other words event that corresponds to both events $A$ and $B$ happening simultaniously)</li>
+</ol>
+<p><br><img src="images/conditioning-1.png" width="500"/><br></p>
+<p>If we assume that event B already happened, it becomes our new sample space. And that part of event $B$ that used to represent the intersection of $A$ and $B$ now represent a conditional event $A \mid B$</p>
+<p><br><img src="images/conditioning-2.png" width="420"/><br></p>
+<p>Probability of such event is defined as follows:</p>
+$$ P (A \mid B) = \frac{P(A \cap B)}{P(B)} $$<p>If both events consist of equally likely outcomes we can think about that formula as a proportion of outcomes that fall in both events $A$ and $B$ and outcomes that fall in $B$, event we are conditioning.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conditional-distribution">Conditional distribution<a class="anchor-link" href="#Conditional-distribution">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Condition-block">Condition block<a class="anchor-link" href="#Condition-block">&#182;</a></h2><p>It's the simplest model block in StatSim. It only contains one input field that is used for writing conditional statements. To create a new <code>Conditional</code> block click <code>New block</code> then choose <code>Condition</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Rejection-Sampling">Rejection Sampling<a class="anchor-link" href="#Rejection-Sampling">&#182;</a></h2><p>Until now we used <code>Rejection sampling</code> algorithm to generate random samples in a forward way. We created random variables used them in the model in different ways then analyzed the output. What rejection sampling can also do is reject samples that don't satisfy the <code>Condition</code> blocks. It continues generating and rejecting values until the total number of successful (such that satisfy provided conditions) samples is equal to the <code>Samples</code> parameter of the model. Using that technique we can model conditional probability and think in backward style. If the output is equal to X what is the input.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example:-Throwing-a-coin-10-times">Example: Throwing a coin 10 times<a class="anchor-link" href="#Example:-Throwing-a-coin-10-times">&#182;</a></h2><p>Binomial distribution defines a random variable that equals to number of successful (<code>true</code>) results of <code>N</code> Bernoulli random variables with the same probability of success for each variable equal to <code>P</code>. Let's say our experiment consists of throwing a coin <code>10</code> times and counting number of <code>Heads</code>. Such value is distributed according to Binomial distribution with the parameter <code>N</code> equal to <code>10</code>. What if after performing the experiment we got <code>2</code> heads? How can we reason about the <code>P</code>? The point estimate can give us its value equal to <code>2/10</code> but can we trust such estimate? Let's model that!</p>
+<p>We will create out target variable <code>P</code> as a uniformly distributed on the range <code>(0,1)</code> random  variable. That variable is used as a parameter <code>P</code> of the Binomial distribution for the second variable <code>ProbAmount</code>. At that point <code>ProbAmount</code> will generate an output containing possible values Binomial distribution can return with all different values of <code>P</code>. But it's not what we are interested in. We need to condition on <code>ProbAmount</code> being equal to <code>2</code> and examine <code>P</code>. To do that add a third block <code>Condition</code> containing the expression <code>ProbAmount === 2</code>. Now, if we output <code>ProbAmount</code> it will show only one scalar value <code>2</code> no matter how many samples we generate. But if we add <code>P</code> to the output instead of <code>ProbAmount</code> the result will show the distribution we are interested in.</p>
 
 </div>
 </div>
@@ -1270,7 +1320,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22P%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%221%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22ProbAmount%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%22P%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22t%22%3A5%2C%22v%22%3A%22ProbAmount%20%3D%3D%3D%202%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2210000%22%7D%7D%5D&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1289,8 +1339,10 @@ h6:hover .anchor-link {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
+    <div style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
+      <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22P%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%221%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22ProbAmount%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%22P%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22t%22%3A5%2C%22v%22%3A%22ProbAmount%20%3D%3D%3D%202%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2210000%22%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div><br>
+    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22P%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%221%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22ProbAmount%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%22P%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22t%22%3A5%2C%22v%22%3A%22ProbAmount%20%3D%3D%3D%202%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2210000%22%7D%7D%5D" style="margin: 10px 0">Open in StatSim</a>
   
 </div>
 
@@ -1303,46 +1355,10 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are 2 key areas of the StatSim window: block stack on the left and preview with results on the right. To actually build a model use the left part. Each model (program) consists of building blocks. Our new simple program just sums two variables and displays results. What we need is two data blocks for each input variable and one expression block that describes a formula: <code>x + y</code>.</p>
-<p>Data blocks can be used as inner, hidden constants or model inputs (model parameters). That determines if the corresponding input element is shown in preview mode and when compiled to system binaries.</p>
+<h2 id="Conditioning-on-continious-variables">Conditioning on continious variables<a class="anchor-link" href="#Conditioning-on-continious-variables">&#182;</a></h2><p>It's important to understand how the rejection sampling algorithm works because sometimes it can stuck if used not correctly. Because it rejects samples until they satisfy all the <code>condition</code> blocks, if you create a condition that is always false, the program will freeze. That is the case when conditioning on continious variables with strong rules like <code>A === 0.5</code> where A is a continious random variable. In continuous case the probability of getting one specific value is equal to <code>0</code> so rejection sampler generates thousands of values immediately rejecting them.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-    <iframe src="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
-  
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1392,14 +1408,14 @@ h6:hover .anchor-link {
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/ru/author/anton-zemlianskii.html">Антон Землянский</a>
+                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky.html">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/ru/category/overview.html" rel="bookmark" title="Permalink to Overview">
-                    Overview
+                  <a href="https://statsim.com/docs/ru/category/stochastic-modeling.html" rel="bookmark" title="Permalink to Stochastic modeling">
+                    Stochastic modeling
                   </a>
                 </span>
-                <p class="post_date">Sat 15 September 2018</p>
+                <p class="post_date">Mon 29 October 2018</p>
             </div>
         </article>
     </section>

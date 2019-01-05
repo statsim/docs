@@ -7,11 +7,25 @@ html {
 /* Titles */
 h1 { text-transform: uppercase }
 h1, h2 { 
-	font-weight: normal; 
+  font-weight: normal; 
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
+h2.post_detail, .post-summary {
+  margin-left: 10px;
+}
+
+.post-summary {
+  font-size: 18px;
+  color: #8c8c96;
+}
+
+article code {
+  background: #edebf5;
+  padding: 1px 4px;
+  color: #202020;
+}
 
 .title
 {
@@ -32,7 +46,7 @@ h1, h2 {
 
 .post_detail
 {
-  font-size: 2em;
+  font-size: 2.4em;
   line-height: 1em;
 }
 
@@ -102,13 +116,16 @@ article > header {
   border-radius: 5px 5px;
 }
 
+a {
+  color: #9f9da4;
+  text-decoration:none;
+}
 
-/* Links */;
-a  { color:#1DAEDF; text-decoration:none; }
-a:visited { color:#1DAEDF; text-decoration:none; }
-a:link { color:#1DAEDF; text-decoration:none; }
-a:active { color:#1DAEDF; text-decoration:none; }
-a:hover { text-decoration: underline; }
+a:hover {
+  color: #008ACC;
+  text-decoration:none;
+}
+
 
 /* Code */
 .highlight pre {

@@ -1149,7 +1149,7 @@ h6:hover .anchor-link {
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;./open&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;open&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;./open&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
     &lt;/div&gt;
@@ -1171,7 +1171,7 @@ h6:hover .anchor-link {
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://statsim.com/app/?a=%5B%7B%22b&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A%5B%7B%22n&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A&lt;/span&gt;&lt;span class="si"&gt;%22x%22%&lt;/span&gt;&lt;span class="s1"&gt;2C&lt;/span&gt;&lt;span class="si"&gt;%22s&lt;/span&gt;&lt;span class="s1"&gt;h&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3Afalse%2C%22t&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A2%2C&lt;/span&gt;&lt;span class="si"&gt;%22u%22%&lt;/span&gt;&lt;span class="s1"&gt;3Atrue%2C&lt;/span&gt;&lt;span class="si"&gt;%22d&lt;/span&gt;&lt;span class="s1"&gt;ims&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;22%2C%22v&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A&lt;/span&gt;&lt;span class="si"&gt;%222%&lt;/span&gt;&lt;span class="s1"&gt;22%7D%2C%7B%22n&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A%22y&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;2C&lt;/span&gt;&lt;span class="si"&gt;%22s&lt;/span&gt;&lt;span class="s1"&gt;h&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3Afalse%2C%22t&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A2%2C&lt;/span&gt;&lt;span class="si"&gt;%22u%22%&lt;/span&gt;&lt;span class="s1"&gt;3Atrue%2C&lt;/span&gt;&lt;span class="si"&gt;%22d&lt;/span&gt;&lt;span class="s1"&gt;ims&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;22%2C%22v&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A&lt;/span&gt;&lt;span class="si"&gt;%223%&lt;/span&gt;&lt;span class="s1"&gt;22%7D%2C%7B%22n&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A%22z&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;2C&lt;/span&gt;&lt;span class="si"&gt;%22h%&lt;/span&gt;&lt;span class="s1"&gt;22%3Afalse%2C&lt;/span&gt;&lt;span class="si"&gt;%22s&lt;/span&gt;&lt;span class="s1"&gt;h&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3Atrue%2C%22t&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A1%2C%22v&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A&lt;/span&gt;&lt;span class="si"&gt;%22x&lt;/span&gt;&lt;span class="s1"&gt;%2By&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;7D%5D%2C%22mod&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A%7B%22n&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A%22Sum&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;2C&lt;/span&gt;&lt;span class="si"&gt;%22e%22%&lt;/span&gt;&lt;span class="s1"&gt;3A&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;22%2C&lt;/span&gt;&lt;span class="si"&gt;%22s%22%&lt;/span&gt;&lt;span class="s1"&gt;3A1%2C%22m&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A&lt;/span&gt;&lt;span class="si"&gt;%22d&lt;/span&gt;&lt;span class="s1"&gt;eterministic&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;7D%2C%22met&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A%7B&lt;/span&gt;&lt;span class="si"&gt;%22s&lt;/span&gt;&lt;span class="s1"&gt;m&lt;/span&gt;&lt;span class="si"&gt;%22%&lt;/span&gt;&lt;span class="s1"&gt;3A1000%7D%7D%5D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="nx"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
     &lt;/div&gt;
@@ -1212,10 +1212,45 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="nx"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+
+    &lt;iframe src="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" width="900" height="600"&gt;&lt;/iframe&gt;&lt;br&gt;
+    &lt;a href="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" style="margin: 20px 0"&gt;Open in StatSim&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[&amp;nbsp;]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt; 
+&lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
     &lt;/div&gt;

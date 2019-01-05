@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ru" itemscope itemtype="http://schema.org/Person">
+<html lang="en" itemscope itemtype="http://schema.org/Person">
 <head>
             <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>Models and Projects</title>
+        <title>2.0 Deterministic models</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Anton Zemlyansky">
@@ -11,18 +11,18 @@
         <link rel="shortcut icon" href="">
 
         <!-- schema.org -->
-        <meta itemprop="name" content="Справочник StatSim">
+        <meta itemprop="name" content="StatSim Documentation">
         <meta itemprop="image" content="">
         <meta itemprop="description" content="">
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
         <!-- Style Meta Data -->
-        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/style.css" type="text/css"/>
-        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="https://statsim.com/docs/theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://statsim.com/docs/theme/css/pygments.css" type="text/css"/>
 
         <!-- Feed Meta Data -->
-            <link href="https://statsim.com/docs/ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-                  title="Справочник StatSim ATOM Feed"/>
+            <link href="https://statsim.com/docs/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="StatSim Documentation ATOM Feed"/>
 
         <!-- Twitter Feed -->
         <meta name="twitter:card" content="summary">
@@ -30,25 +30,27 @@
         <meta name="twitter:image" content="">
 
     <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/ru/drafts/models-en.html">
-    <meta name="twitter:title" content="Справочник StatSim ~ Models and Projects">
-    <meta name="twitter:description" content="Introduction to StatSim models">
+    <meta name="twitter:url" content="https://statsim.com/docs/deterministic-models.html">
+    <meta name="twitter:title" content="StatSim Documentation ~ 2.0 Deterministic models">
+    <meta name="twitter:description" content="What is modeling, deterministic models, how to design effective models">
 
     <!-- Facebook Meta Data -->
-    <meta property="og:title" content="Справочник StatSim ~ Models and Projects"/>
-    <meta property="og:description" content="Introduction to StatSim models"/>
+    <meta property="og:title" content="StatSim Documentation ~ 2.0 Deterministic models"/>
+    <meta property="og:description" content="What is modeling, deterministic models, how to design effective models"/>
     <meta property="og:image" content=""/>
 </head>
 
 <body>
 <!-- Sidebar -->
 <aside>
-    <img src="https://statsim.com/docs/ru/../theme/images/statsim-logo.png" style="width: 130px">
-    <!--<center><a href="https://statsim.com/docs/ru"><img id="avatar" src=""></a></center>-->
-    <h1>Справочник StatSim</h1>
-    <a href="https://statsim.com/docs/ru/../theme/../">English</>
+    <a href="https://statsim.com/docs/theme/../">
+      <img src="https://statsim.com/docs/theme/images/statsim-logo.png" style="width: 130px">
+    </a>
+    <!--<center><a href="https://statsim.com/docs"><img id="avatar" src=""></a></center>-->
+    <h1>StatSim Documentation</h1>
+    <a href="https://statsim.com/docs/theme/../">English</>
     <br>
-    <a href="https://statsim.com/docs/ru/../theme/../ru/">Russian</>
+    <a href="https://statsim.com/docs/theme/../ru/">Russian</>
     <br>
 
 
@@ -62,19 +64,25 @@
 
     <p class="social">
                 <a href="https://twitter.com/statsimcom" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/twitter.png"></a>
+                        src="https://statsim.com/docs/theme/images/icons/twitter.png"></a>
                 <a href="https://www.facebook.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/facebook.png"></a>
+                        src="https://statsim.com/docs/theme/images/icons/facebook.png"></a>
                 <a href="https://github.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/github.png"></a>
-            <a href="https://statsim.com/docs/ru/feeds/all.atom.xml" rel="alternate">
-                <img src="https://statsim.com/docs/ru/../theme/images/icons/rss.png"></a>
+                        src="https://statsim.com/docs/theme/images/icons/github.png"></a>
+            <a href="https://statsim.com/docs/feeds/all.atom.xml" rel="alternate">
+                <img src="https://statsim.com/docs/theme/images/icons/rss.png"></a>
     </p>
 
         <h2>Categories</h2>
         <ul class="navbar">
+                <li class="active"><a
+                        href="https://statsim.com/docs/category/deterministic-models.html">Deterministic models</a></li>
                 <li><a
-                        href="https://statsim.com/docs/ru/category/overview.html">Overview</a></li>
+                        href="https://statsim.com/docs/category/inference.html">Inference</a></li>
+                <li><a
+                        href="https://statsim.com/docs/category/overview.html">Overview</a></li>
+                <li><a
+                        href="https://statsim.com/docs/category/stochastic-modeling.html">Stochastic modeling</a></li>
         </ul>
 
         <h2 class="blog_roll_link"><br/>LINKS</h2>
@@ -89,10 +97,14 @@
 <article>
     <section id="content">
         <article>
-            <h2 class="post_title post_detail"><a href="https://statsim.com/docs/ru/drafts/models-en.html" rel="bookmark"
-                                                  title="Permalink to Models and Projects">Models and Projects</a></h2>
+            <h2 class="post_title post_detail">
+              2.0 Deterministic models
+            </h2>
             <div class="entry-content blog-post">
-                <style type="text/css">/*!
+              <div class="post-summary">
+                <p>What is modeling, deterministic models, how to design effective models</p>
+              </div>
+              <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -1253,95 +1265,51 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>"All models are wrong but some are useful"</p>
+<blockquote><p><em>Deterministic model.</em> Mathematical model in which outcomes are precisely determined through known relationships among states and events, without any room for random variation. In such models, a given input will always produce the same output, such as in a known chemical reaction. In comparison, stochastic models use ranges of values for variables in the form of probability distributions. <a href="http://www.businessdictionary.com/definition/deterministic-model.html">source</a></p>
 </blockquote>
-<p>Models describe relationship between variables and how output is generated. A statistical model represents data generation process that generally approximates some real-life phenomena. Creating models in StatSim is like programming in the browser. Or strictly speaking <a href="https://en.wikipedia.org/wiki/Probabilistic_programming_language">probabilistic programming</a> in the browser.</p>
-<p>A new model 'Main' is initialized automatically when you create a new project or fresh-start the app. Usually you need only one model in the project. However each StatSim project can include multiple models. It's possible to call one model from another dividing the project in logical parts connected between each other.</p>
-<p>Models inputs are declared as data blocks with "Use as parameter checkbox" activated. Such parameters can be used later when calling the model as a function or using it as a probability distribution.</p>
-<p>If a model returns a scalar value in <code>Determinstic</code> simulation it behaves as a function when called from another place. To create a new model, find a small icon with three dots <code>⦁ ⦁ ⦁</code> just near the current model tab.  Example of two models, one of them called <code>lin</code> behaves as a linear function that takes <code>x</code>, and returns a <code>a * x + b</code>. Then it's called from the main model as a function.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
-  
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Other simulation methods make models to be exported as probability distributions. Such distributions will be automatically loaded in a list of default distributions in Random Variable blocks of other models.</p>
-<p>Lets change how lin model behaves and instead of return scalar <code>a * x + b</code> return a gaussian distribution centered around <code>a * x + b</code> with a standard deviation equal to <code>x / 2</code></p>
-<p>Be careful with creating many interconnected probabilistic models. Number of samples to be generated grows exponentially.</p>
+<h2 id="Why-creating-models">Why creating models<a class="anchor-link" href="#Why-creating-models">&#182;</a></h2><p>Models represent relationships between some quantities and qualities. Sometimes people can construct such models in their mind, without really understanding they are modeling something. We don't need special software to calculate simple things. However when the number of quantities and their inter-connection grow we need a tool to deal with the complexity. Especially hard to reason about values that have some kind of feedback.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
-  
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Test-hypotheses-with-models">Test hypotheses with models<a class="anchor-link" href="#Test-hypotheses-with-models">&#182;</a></h2><p>Sometimes you can test hypotheses about the system with a model. However the model is not the reality. Keep in mind that there are no 100% correct models that describe reality.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Define-the-problem">Define the problem<a class="anchor-link" href="#Define-the-problem">&#182;</a></h2><p>Creating a model starts as any scientific or other project with defining a problem. It's possible to create models just for the act of creation and exploration, however only problem-oriented projects help filter only things you need ask correct questions at the end.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Collect-information">Collect information<a class="anchor-link" href="#Collect-information">&#182;</a></h2><p>Collect available relevant information.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Simplify">Simplify<a class="anchor-link" href="#Simplify">&#182;</a></h2><p>The world is complex, and trying to transfer all the real-world complexity into the model is not really a good idea. Extract what really matters and create a model based on that quantities</p>
+
+</div>
+</div>
 </div>
  
 
@@ -1378,43 +1346,14 @@ h6:hover .anchor-link {
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky.html">@Anton Zemlyansky</a>
+                <a href="https://statsim.com/docs/author/anton-zemlyansky.html">Anton Zemlyansky</a>
                 <span> in </span>
-                <span class="post_category"><a href="https://statsim.com/docs/ru/category/modeling.html" rel="bookmark"
-                                               title="Permalink to Modeling">[ Modeling ]</a></span>
-                <span class="post_date">Sun 21 October 2018</span>
-                <div><span>Tags : </span>
-                </div>
-
-                <div class="entry-social">
-                    <span class="twitter"><a target="_blank" rel="nofollow"
-                                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"
-                                             title="Twitter"
-                                             href="https://twitter.com/share?url=https://statsim.com/docs/ru/drafts/models-en.html&text=Models and Projects&via="><img
-                            src="https://statsim.com/docs/ru/theme/images/icons/twitter-s.png"></a></span>
-
-                    <span class="gplus"><a target="_blank" title="Google +"
-                                           href="https://plus.google.com/share?url=https://statsim.com/docs/ru/drafts/models-en.html&hl=fr"
-                                           rel="nofollow"
-                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
-                            src="https://statsim.com/docs/ru/theme/images/icons/google-s.png"></a></span>
-
-                    <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow"
-                                              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"
-                                              href="https://www.facebook.com/sharer.php?u=https://statsim.com/docs/ru/drafts/models-en.html&t=Models and Projects"><img
-                            src="https://statsim.com/docs/ru/theme/images/icons/facebook-s.png"></a></span>
-
-                    <a target="_blank" title="Linkedin"
-                       href="https://www.linkedin.com/shareArticle?mini=true&url=https://statsim.com/docs/ru/drafts/models-en.html&title=Models and Projects"
-                       rel="nofollow"
-                       onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
-                            src="https://statsim.com/docs/ru/theme/images/icons/linkedin-s.png"></a>
-
-                    <span class="mail"><a
-                            href="mailto:?subject=Models and Projects&amp;body=Viens découvrir un article à propos de [Models and Projects] sur le site de Anton Zemlyansky. https://statsim.com/docs/ru/drafts/models-en.html"
-                            title="Share by Email" target="_blank"><img
-                            src="https://statsim.com/docs/ru/theme/images/icons/mail-s.png"></a></span>
-                </div>
+                <span class="post_category">
+                  <a href="https://statsim.com/docs/category/deterministic-models.html" rel="bookmark" title="Permalink to Deterministic models">
+                    Deterministic models
+                  </a>
+                </span>
+                <p class="post_date">Mon 29 October 2018</p>
             </div>
         </article>
     </section>

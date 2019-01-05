@@ -3,7 +3,7 @@
 <head>
             <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>Overview</title>
+        <title>2.0 Deterministic models</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Anton Zemlyansky">
@@ -30,13 +30,13 @@
         <meta name="twitter:image" content="">
 
     <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/ru/overview.html">
-    <meta name="twitter:title" content="Справочник StatSim ~ Overview">
-    <meta name="twitter:description" content="Обзор">
+    <meta name="twitter:url" content="https://statsim.com/docs/ru/drafts/deterministic-models-en.html">
+    <meta name="twitter:title" content="Справочник StatSim ~ 2.0 Deterministic models">
+    <meta name="twitter:description" content="What is modeling, deterministic models, how to design effective models">
 
     <!-- Facebook Meta Data -->
-    <meta property="og:title" content="Справочник StatSim ~ Overview"/>
-    <meta property="og:description" content="Обзор"/>
+    <meta property="og:title" content="Справочник StatSim ~ 2.0 Deterministic models"/>
+    <meta property="og:description" content="What is modeling, deterministic models, how to design effective models"/>
     <meta property="og:image" content=""/>
 </head>
 
@@ -75,7 +75,7 @@
 
         <h2>Categories</h2>
         <ul class="navbar">
-                <li class="active"><a
+                <li><a
                         href="https://statsim.com/docs/ru/category/overview.html">Overview</a></li>
         </ul>
 
@@ -92,11 +92,11 @@
     <section id="content">
         <article>
             <h2 class="post_title post_detail">
-              Overview
+              2.0 Deterministic models
             </h2>
             <div class="entry-content blog-post">
               <div class="post-summary">
-                <p>Обзор</p>
+                <p>What is modeling, deterministic models, how to design effective models</p>
               </div>
               <style type="text/css">/*!
 *
@@ -1245,7 +1245,7 @@ h6:hover .anchor-link {
 </style>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
@@ -1259,103 +1259,51 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>StatSim</em> is a multipurpose app. It wraps <a href="http://webppl.org/">WebPPL</a>, a probabilistic programming language, in a user-friendly graphical interface based on <a href="https://vuejs.org/">Vue.js</a> and a couple of additional libraries. StatSim can be used to create basic programs, however its main purpose is probabilistic simulations and modeling.</p>
-<p>Let's open a simple example that just sums two variables <em>x</em> and <em>y</em> and displays results:</p>
+<blockquote><p><em>Deterministic model.</em> Mathematical model in which outcomes are precisely determined through known relationships among states and events, without any room for random variation. In such models, a given input will always produce the same output, such as in a known chemical reaction. In comparison, stochastic models use ranges of values for variables in the form of probability distributions. <a href="http://www.businessdictionary.com/definition/deterministic-model.html">source</a></p>
+</blockquote>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
-  
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are 2 key areas of the StatSim window: block stack on the left and preview with results on the right. To actually build a model use the left part. Each model (program) consists of building blocks. Our new simple program just sums two variables and displays results. What we need is two data blocks for each input variable and one expression block that describes a formula: <code>x + y</code>.</p>
-<p>Data blocks can be used as inner, hidden constants or model inputs (model parameters). That determines if the corresponding input element is shown in preview mode and when compiled to system binaries.</p>
+<h2 id="Why-creating-models">Why creating models<a class="anchor-link" href="#Why-creating-models">&#182;</a></h2><p>Models represent relationships between some quantities and qualities. Sometimes people can construct such models in their mind, without really understanding they are modeling something. We don't need special software to calculate simple things. However when the number of quantities and their inter-connection grow we need a tool to deal with the complexity. Especially hard to reason about values that have some kind of feedback.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-    <iframe src="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
-  
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Test-hypotheses-with-models">Test hypotheses with models<a class="anchor-link" href="#Test-hypotheses-with-models">&#182;</a></h2><p>Sometimes you can test hypotheses about the system with a model. However the model is not the reality. Keep in mind that there are no 100% correct models that describe reality.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Define-the-problem">Define the problem<a class="anchor-link" href="#Define-the-problem">&#182;</a></h2><p>Creating a model starts as any scientific or other project with defining a problem. It's possible to create models just for the act of creation and exploration, however only problem-oriented projects help filter only things you need ask correct questions at the end.</p>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre>
-</pre></div>
-
-    </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Collect-information">Collect information<a class="anchor-link" href="#Collect-information">&#182;</a></h2><p>Collect available relevant information.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Simplify">Simplify<a class="anchor-link" href="#Simplify">&#182;</a></h2><p>The world is complex, and trying to transfer all the real-world complexity into the model is not really a good idea. Extract what really matters and create a model based on that quantities</p>
+
+</div>
+</div>
 </div>
  
 
@@ -1392,14 +1340,14 @@ h6:hover .anchor-link {
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/ru/author/anton-zemlianskii.html">Антон Землянский</a>
+                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky.html">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/ru/category/overview.html" rel="bookmark" title="Permalink to Overview">
-                    Overview
+                  <a href="https://statsim.com/docs/ru/category/deterministic-models.html" rel="bookmark" title="Permalink to Deterministic models">
+                    Deterministic models
                   </a>
                 </span>
-                <p class="post_date">Sat 15 September 2018</p>
+                <p class="post_date">Mon 29 October 2018</p>
             </div>
         </article>
     </section>

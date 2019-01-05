@@ -3,7 +3,7 @@
 <head>
             <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>Models and Projects</title>
+        <title>2.3 Expressions</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Anton Zemlyansky">
@@ -30,20 +30,22 @@
         <meta name="twitter:image" content="">
 
     <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/models.html">
-    <meta name="twitter:title" content="StatSim Documentation ~ Models and Projects">
-    <meta name="twitter:description" content="Introduction to StatSim models">
+    <meta name="twitter:url" content="https://statsim.com/docs/expressions.html">
+    <meta name="twitter:title" content="StatSim Documentation ~ 2.3 Expressions">
+    <meta name="twitter:description" content="Make calculations with expression blocks, process arrays and tensors, conditional expressions, JavaScript.">
 
     <!-- Facebook Meta Data -->
-    <meta property="og:title" content="StatSim Documentation ~ Models and Projects"/>
-    <meta property="og:description" content="Introduction to StatSim models"/>
+    <meta property="og:title" content="StatSim Documentation ~ 2.3 Expressions"/>
+    <meta property="og:description" content="Make calculations with expression blocks, process arrays and tensors, conditional expressions, JavaScript."/>
     <meta property="og:image" content=""/>
 </head>
 
 <body>
 <!-- Sidebar -->
 <aside>
-    <img src="https://statsim.com/docs/theme/images/statsim-logo.png" style="width: 130px">
+    <a href="https://statsim.com/docs/theme/../">
+      <img src="https://statsim.com/docs/theme/images/statsim-logo.png" style="width: 130px">
+    </a>
     <!--<center><a href="https://statsim.com/docs"><img id="avatar" src=""></a></center>-->
     <h1>StatSim Documentation</h1>
     <a href="https://statsim.com/docs/theme/../">English</>
@@ -74,9 +76,13 @@
         <h2>Categories</h2>
         <ul class="navbar">
                 <li class="active"><a
-                        href="https://statsim.com/docs/category/modeling.html">Modeling</a></li>
+                        href="https://statsim.com/docs/category/deterministic-models.html">Deterministic models</a></li>
+                <li><a
+                        href="https://statsim.com/docs/category/inference.html">Inference</a></li>
                 <li><a
                         href="https://statsim.com/docs/category/overview.html">Overview</a></li>
+                <li><a
+                        href="https://statsim.com/docs/category/stochastic-modeling.html">Stochastic modeling</a></li>
         </ul>
 
         <h2 class="blog_roll_link"><br/>LINKS</h2>
@@ -91,10 +97,14 @@
 <article>
     <section id="content">
         <article>
-            <h2 class="post_title post_detail"><a href="https://statsim.com/docs/models.html" rel="bookmark"
-                                                  title="Permalink to Models and Projects">Models and Projects</a></h2>
+            <h2 class="post_title post_detail">
+              2.3 Expressions
+            </h2>
             <div class="entry-content blog-post">
-                <style type="text/css">/*!
+              <div class="post-summary">
+                <p>Make calculations with expression blocks, process arrays and tensors, conditional expressions, JavaScript.</p>
+              </div>
+              <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -1255,22 +1265,62 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>"All models are wrong but some are useful"</p>
+<h2 id="Why-expressions">Why expressions<a class="anchor-link" href="#Why-expressions">&#182;</a></h2><blockquote><p>An expression is any valid unit of code that resolves to a value. (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">source</a>)</p>
 </blockquote>
-<p>Models describe relationship between variables and how output is generated. A statistical model represents data generation process that generally approximates some real-life phenomena. Creating models in StatSim is like programming in the browser. Or strictly speaking <a href="https://en.wikipedia.org/wiki/Probabilistic_programming_language">probabilistic programming</a> in the browser.</p>
-<p>A new model 'Main' is initialized automatically when you create a new project or fresh-start the app. Usually you need only one model in the project. However each StatSim project can include multiple models. It's possible to call one model from another dividing the project in logical parts connected between each other.</p>
-<p>Models inputs are declared as data blocks with "Use as parameter checkbox" activated. Such parameters can be used later when calling the model as a function or using it as a probability distribution.</p>
-<p>If a model returns a scalar value in <code>Determinstic</code> simulation it behaves as a function when called from another place. To create a new model, find a small icon with three dots <code>⦁ ⦁ ⦁</code> just near the current model tab.  Example of two models, one of them called <code>lin</code> behaves as a linear function that takes <code>x</code>, and returns a <code>a * x + b</code>. Then it's called from the main model as a function.</p>
+<p>To make a model useful, data is not enough. It's usually transformed in different ways to get a result. Expressions in StatSim are blocks that describe such transformations. An expression block includes the name field that makes it possible to use expression output later in the model. The second field is the actual expression. It shows the expression itself.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Simple-formulas">Simple formulas<a class="anchor-link" href="#Simple-formulas">&#182;</a></h2><p>StatSim is based on <a href="http://webppl.org/">WebPPL</a> which is based on JavaScript. So almost any expression you can write in JavaScript, you can also write in StatSim. WebPPL adds its own list of helper functions so you can also use it with JS native functions. Examples of correct expressions include:<br></p>
+<ul>
+<li><code>10 + 1</code></li>
+<li><code>x * (y - 5)</code> where <code>x</code> and <code>y</code> are declared somewhere else</li>
+<li><code>fn(x)</code> where <code>fn</code> is a function</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Math-object">Math object<a class="anchor-link" href="#Math-object">&#182;</a></h2><p>Sometimes basic arithmetic operators are not enough. If you want to use a mathematical constant (like <code>PI</code> or <code>E</code>) or a function (like <code>sin</code>, <code>cos</code> etc) you can call <code>Math</code> object in your expression:
+<code>Math.PI</code>
+<code>Math.sin(5)</code>
+<code>Math.min(x,y)</code>
+Full list of <code>Math</code> properties and methods find here: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math (MDN)</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example:-Loan-calculator">Example: Loan calculator<a class="anchor-link" href="#Example:-Loan-calculator">&#182;</a></h2><p>At the moment we know how to add input parameters to the model (data blocks) and set relationship between them (expressions). Let's make something a little more useful model than one that sums <code>a</code> and <code>b</code>. Our new model calculates loan monthly payments. Inputs are <code>Principal</code> (amount of borrowed money, dollars), <code>Rate</code> (annual percentage rate, percents) and <code>Term</code> (amount of time in which the loan will be repayed, months). We assume our loan is a <a href="https://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula">fixed rate mortgage</a>, with the corresponding formula for monthly payments:</p>
+$$MonthlyPayment = Principal \times \frac{Rate (1 + Rate)^{Term}}{(1 + Rate)^{Term} - 1}$$<p>To make use of the formula we should convert annual percentage rate in <code>%</code> to the monthly rate using the formula:</p>
+$$MonthlyRate = \frac{AnnualRate}{12 \times 100}$$<p>So, in our model we should have 3 data inputs and 2 expressions (the first one to calculate monthly rate, the second for the final output). Corresponding expressions are:</p>
+<ul>
+<li><code>AnnualRate / (12 * 100)</code></li>
+<li><code>Principal * MonthlyRate * Math.pow(1 + MonthlyRate, Term) / (Math.pow(1 + MonthlyRate, Term) - 1)</code></li>
+</ul>
+<p>You can see that we use the <code>Math</code> object and its function <code>pow(x,n)</code> that raises <code>x</code> to the power of <code>n</code>. In our case x is <code>1 + MonthlyRate</code> and <code>n</code> is <code>Term</code>. This expression is quite long and has repeating pattern. It's a good practice to separate such repeating blocks. So let's create one more expression that calculates value <code>Math.pow(1 + MonthlyRate, Term)</code> and call it <code>Pow</code>. Our final expression is</p>
+<ul>
+<li><code>Principal * MonthlyRate * Pow / (Pow - 1)</code></li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22Principal%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22200000%22%7D%2C%7B%22n%22%3A%22AnnualRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%229%22%7D%2C%7B%22n%22%3A%22Term%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22360%22%7D%2C%7B%22n%22%3A%22MonthlyRate%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22AnnualRate%20%2F%20%2812%20%2A%20100%29%22%7D%2C%7B%22n%22%3A%22Pow%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.pow%281%20%2B%20MonthlyRate%2C%20Term%29%22%7D%2C%7B%22n%22%3A%22Payment%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Principal%20%2A%20MonthlyRate%20%2A%20%20Pow%20%2F%20%28Pow%20-%201%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Mortgage%20Calculator%22%2C%22e%22%3A%22Monthly%20payment%20calculator%20for%20a%20fixed%20rate%20mortgage.%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1283,14 +1333,16 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
+    <div style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
+      <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22Principal%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22200000%22%7D%2C%7B%22n%22%3A%22AnnualRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%229%22%7D%2C%7B%22n%22%3A%22Term%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22360%22%7D%2C%7B%22n%22%3A%22MonthlyRate%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22AnnualRate%20%2F%20%2812%20%2A%20100%29%22%7D%2C%7B%22n%22%3A%22Pow%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.pow%281%20%2B%20MonthlyRate%2C%20Term%29%22%7D%2C%7B%22n%22%3A%22Payment%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Principal%20%2A%20MonthlyRate%20%2A%20%20Pow%20%2F%20%28Pow%20-%201%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Mortgage%20Calculator%22%2C%22e%22%3A%22Monthly%20payment%20calculator%20for%20a%20fixed%20rate%20mortgage.%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div><br>
+    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22Principal%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22200000%22%7D%2C%7B%22n%22%3A%22AnnualRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%229%22%7D%2C%7B%22n%22%3A%22Term%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22360%22%7D%2C%7B%22n%22%3A%22MonthlyRate%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22AnnualRate%20%2F%20%2812%20%2A%20100%29%22%7D%2C%7B%22n%22%3A%22Pow%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.pow%281%20%2B%20MonthlyRate%2C%20Term%29%22%7D%2C%7B%22n%22%3A%22Payment%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Principal%20%2A%20MonthlyRate%20%2A%20%20Pow%20%2F%20%28Pow%20-%201%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Mortgage%20Calculator%22%2C%22e%22%3A%22Monthly%20payment%20calculator%20for%20a%20fixed%20rate%20mortgage.%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 10px 0">Open in StatSim</a>
   
 </div>
 
@@ -1303,44 +1355,68 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Other simulation methods make models to be exported as probability distributions. Such distributions will be automatically loaded in a list of default distributions in Random Variable blocks of other models.</p>
-<p>Lets change how lin model behaves and instead of return scalar <code>a * x + b</code> return a gaussian distribution centered around <code>a * x + b</code> with a standard deviation equal to <code>x / 2</code></p>
-<p>Be careful with creating many interconnected probabilistic models. Number of samples to be generated grows exponentially.</p>
+<p>In this example, we created three data blocks as input parameters, and three expressions, where <code>Payments</code> is the model output (<code>Show in output</code> flag). We also use the <code>Math.pow()</code> function that takes two arguments and raises the first one to the power of second. You can also create your own functions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Functions">Functions<a class="anchor-link" href="#Functions">&#182;</a></h2><p>You can create functions just as you created expressions. Choose a proper name and then instead of writing operators and regular method, type a special function template <code>function (x,y) {return x * y}</code>. In round brackets put function parameters (inputs), after <code>return</code> write the output expression. Then you can use that function in other blocks. Currently I'm not sure if it's a good idea to separate functions in a separate block type. What do you think?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Array-expressions">Array expressions<a class="anchor-link" href="#Array-expressions">&#182;</a></h2><p>When your input is not a scalar value like <code>5</code> or <code>true</code> but a list of values (array), you can't just use the same scalar operators and write expressions as <code>a + b</code> where <code>a</code> and <code>b</code> are arrays. To compose array expressions use built-in functions.</p>
+<ul>
+<li><code>map(fn, arr)</code></li>
+<li><code>mapN(fn, n)</code></li>
+<li><code>reduce(fn, init, arr)</code></li>
+<li><code>filter(predicate, arr)</code></li>
+<li><code>sum(arr)</code></li>
+<li><code>product(arr)</code></li>
+<li><code>listMean(arr)</code></li>
+<li>...</li>
+</ul>
+<p>I'll not list all the functions. Just check the reference <a href="http://docs.webppl.org/en/master/functions/arrays.html">here</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tensors">Tensors<a class="anchor-link" href="#Tensors">&#182;</a></h2><p>Find the needed reference <a href="http://docs.webppl.org/en/master/functions/tensors.html">here</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conditional-expressions">Conditional expressions<a class="anchor-link" href="#Conditional-expressions">&#182;</a></h2><p>Express should return value. That's why you can't use <code>if</code>,<code>else</code>,<code>while</code> and other JavaScript statements that don't return values when executed. Luckily there's a conditional expression that can be used to control what value is returned. It looks like this:</p>
+<ul>
+<li><code>(condition) ? true_expression : false_expression</code></li>
+</ul>
+<p>If <code>condition</code> is true the whole expression evaluates to <code>true_expression</code> otherwise to <code>false_expression</code>.
+Read about conditional (ternary) operator <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">here</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
-  
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -1380,43 +1456,14 @@ h6:hover .anchor-link {
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/author/anton-zemlyansky.html">@Anton Zemlyansky</a>
+                <a href="https://statsim.com/docs/author/anton-zemlyansky.html">Anton Zemlyansky</a>
                 <span> in </span>
-                <span class="post_category"><a href="https://statsim.com/docs/category/modeling.html" rel="bookmark"
-                                               title="Permalink to Modeling">[ Modeling ]</a></span>
-                <span class="post_date">Sun 21 October 2018</span>
-                <div><span>Tags : </span>
-                </div>
-
-                <div class="entry-social">
-                    <span class="twitter"><a target="_blank" rel="nofollow"
-                                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"
-                                             title="Twitter"
-                                             href="https://twitter.com/share?url=https://statsim.com/docs/models.html&text=Models and Projects&via="><img
-                            src="https://statsim.com/docs/theme/images/icons/twitter-s.png"></a></span>
-
-                    <span class="gplus"><a target="_blank" title="Google +"
-                                           href="https://plus.google.com/share?url=https://statsim.com/docs/models.html&hl=fr"
-                                           rel="nofollow"
-                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
-                            src="https://statsim.com/docs/theme/images/icons/google-s.png"></a></span>
-
-                    <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow"
-                                              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"
-                                              href="https://www.facebook.com/sharer.php?u=https://statsim.com/docs/models.html&t=Models and Projects"><img
-                            src="https://statsim.com/docs/theme/images/icons/facebook-s.png"></a></span>
-
-                    <a target="_blank" title="Linkedin"
-                       href="https://www.linkedin.com/shareArticle?mini=true&url=https://statsim.com/docs/models.html&title=Models and Projects"
-                       rel="nofollow"
-                       onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
-                            src="https://statsim.com/docs/theme/images/icons/linkedin-s.png"></a>
-
-                    <span class="mail"><a
-                            href="mailto:?subject=Models and Projects&amp;body=Viens découvrir un article à propos de [Models and Projects] sur le site de Anton Zemlyansky. https://statsim.com/docs/models.html"
-                            title="Share by Email" target="_blank"><img
-                            src="https://statsim.com/docs/theme/images/icons/mail-s.png"></a></span>
-                </div>
+                <span class="post_category">
+                  <a href="https://statsim.com/docs/category/deterministic-models.html" rel="bookmark" title="Permalink to Deterministic models">
+                    Deterministic models
+                  </a>
+                </span>
+                <p class="post_date">Sat 27 October 2018</p>
             </div>
         </article>
     </section>

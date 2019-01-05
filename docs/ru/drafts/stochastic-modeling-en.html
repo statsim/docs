@@ -3,7 +3,7 @@
 <head>
             <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>Overview</title>
+        <title>3.0 Stochastic modeling</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Anton Zemlyansky">
@@ -30,13 +30,13 @@
         <meta name="twitter:image" content="">
 
     <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/ru/overview.html">
-    <meta name="twitter:title" content="Справочник StatSim ~ Overview">
-    <meta name="twitter:description" content="Обзор">
+    <meta name="twitter:url" content="https://statsim.com/docs/ru/drafts/stochastic-modeling-en.html">
+    <meta name="twitter:title" content="Справочник StatSim ~ 3.0 Stochastic modeling">
+    <meta name="twitter:description" content="How to deal with uncertainty, think in probabilities and work with random variables">
 
     <!-- Facebook Meta Data -->
-    <meta property="og:title" content="Справочник StatSim ~ Overview"/>
-    <meta property="og:description" content="Обзор"/>
+    <meta property="og:title" content="Справочник StatSim ~ 3.0 Stochastic modeling"/>
+    <meta property="og:description" content="How to deal with uncertainty, think in probabilities and work with random variables"/>
     <meta property="og:image" content=""/>
 </head>
 
@@ -75,7 +75,7 @@
 
         <h2>Categories</h2>
         <ul class="navbar">
-                <li class="active"><a
+                <li><a
                         href="https://statsim.com/docs/ru/category/overview.html">Overview</a></li>
         </ul>
 
@@ -92,11 +92,11 @@
     <section id="content">
         <article>
             <h2 class="post_title post_detail">
-              Overview
+              3.0 Stochastic modeling
             </h2>
             <div class="entry-content blog-post">
               <div class="post-summary">
-                <p>Обзор</p>
+                <p>How to deal with uncertainty, think in probabilities and work with random variables</p>
               </div>
               <style type="text/css">/*!
 *
@@ -1245,7 +1245,7 @@ h6:hover .anchor-link {
 </style>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
@@ -1259,90 +1259,111 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>StatSim</em> is a multipurpose app. It wraps <a href="http://webppl.org/">WebPPL</a>, a probabilistic programming language, in a user-friendly graphical interface based on <a href="https://vuejs.org/">Vue.js</a> and a couple of additional libraries. StatSim can be used to create basic programs, however its main purpose is probabilistic simulations and modeling.</p>
-<p>Let's open a simple example that just sums two variables <em>x</em> and <em>y</em> and displays results:</p>
+<p>All models discussed before were basically regular programs. They take input and produce deterministic output. Deterministic here means no matter how many times you rerun the model, or repeat the experiment, you get the same output for same input. Determinstic models are very useful, however in real-world we ofter deal with uncertainty. It means that eah time you can't be 100% sure about the outcome, even knowing all the input parameters. The good news is we know how to reason and work with uncertainty - using probability theory. The bad news is probability theory is not really obvious and has some caveats.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
-  
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are 2 key areas of the StatSim window: block stack on the left and preview with results on the right. To actually build a model use the left part. Each model (program) consists of building blocks. Our new simple program just sums two variables and displays results. What we need is two data blocks for each input variable and one expression block that describes a formula: <code>x + y</code>.</p>
-<p>Data blocks can be used as inner, hidden constants or model inputs (model parameters). That determines if the corresponding input element is shown in preview mode and when compiled to system binaries.</p>
+<h2 id="What-the-heck-is-probability">What the heck is probability<a class="anchor-link" href="#What-the-heck-is-probability">&#182;</a></h2><p>The main problem with studying probability theory is actually understanding what is actually a probability. It seems like an obvious thing to define, but it's not.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Probability-as-a-frequency">Probability as a frequency<a class="anchor-link" href="#Probability-as-a-frequency">&#182;</a></h2><p>A lot of books about probability theory, especially the old ones, contain only one definition of probability as the limiting frequency of an event. In those books you can find canonical examples with non-biased coins or 52 playing cards. Probability in such cases described as a frequency. In other words how many times an event appear compared to total number of experiment repetitions, assuming the experiment is repeatedly performed under the same conditions infinitely many times. Mathematically such concept can be formulated as</p>
+$$P(Event) = \lim_{N \to \infty} \frac{N\tiny Event}{N}$$
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-    <iframe src="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
-  
 </div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Probability-as-a-measure-of-belief">Probability as a measure of belief<a class="anchor-link" href="#Probability-as-a-measure-of-belief">&#182;</a></h2><p>There're events we can't reason about in terms of frequency. They are too rare or have happened in the past. It's just impossible to use the formula below to describe their uncertainty, however using the probability theory still seems like a good choice to work with such events. Let's use one of the basic examples - throwing a coin. Assume that we performed infinitely big number of experiments with that coins and know that the coin is not biased or in a frequentist sence probability of falling for each side top is 1/2. After throwing the coin one player looks at the result and see that it's Heads. For another player the result is still hidden. What is the probability of the result being Heads in such case?</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Kolmogorov's-probability">Kolmogorov's probability<a class="anchor-link" href="#Kolmogorov's-probability">&#182;</a></h2><p>Both point of views on the probability as a frequency or as a measure of belief are very natural and easy to stick to. However they both have their own drawbacks. Mathematically stronger and unifying definition of probability was proposed by Kolmogorov. Kolmogorov's probability is just a value that satisfies 3 axioms:</p>
+<ol>
+<li>$ 0 \leq P(E) \leq 1 $, where E is event</li>
+<li>$ P(S) = 1 $, where S is a <a href="https://en.wikipedia.org/wiki/Sample_space">sample space</a></li>
+<li>$ P \left( \bigcup\limits_{i=1}^{\infty} E_{i}\right) = \sum\limits_{i=1}^{\infty} P(E_{i})$</li>
+</ol>
+<p>In other words, we assume that for each event E from the sample space there exist a number P(E) called the probability of event E, such that:</p>
+<ol>
+<li>It can't be less than 0 or more than 1</li>
+<li>Probability of sample space equals to 1 </li>
+<li>Probability of appearing of at least one event from a sequence of <a href="https://en.wikipedia.org/wiki/Mutual_exclusivity">mutually exclusive events</a> is just the sum of their probabilities</li>
+</ol>
+<p>Such axiomatic approach satisfies both definitions. <a href="https://en.wikipedia.org/wiki/Probability_axioms">Read more</a></p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Random-variables">Random variables<a class="anchor-link" href="#Random-variables">&#182;</a></h2><p>Sometimes outcomes of an experiment is a numerical value, sometimes it's not but it can be trasformed to a number. Some transformations can be more interesting that actual event and it value. When tossing 2 dice in a board game, it's more important to know the sum of dice not the individual values. A quantity, or more formally a function, that assigns a numerical value to each outcome of the experiment called a random variable. Because random variables are based on random outcomes we can also use probability theory to work with them. In modeling it's much easier to deal with random variables rather than raw events.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>See also:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Conditional_probability">Conditional probability</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Independence_(probability_theory">Independence</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Probability-distributions">Probability distributions<a class="anchor-link" href="#Probability-distributions">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Probability distribution is a mathematical function that provides the probabilities of occurrence of different possible outcomes in an experiment. <a href="https://en.wikipedia.org/wiki/Probability_distribution">source</a></p>
+</blockquote>
+<p>When incorporating uncertanty in a model, you'll definetely use one or another probability distribution to describe a random phenomenon. The same as random variables, probability distributions are divided on two groups - discrete and continuous. To characterize discrete distributions <a href="https://en.wikipedia.org/wiki/Probability_mass_function">probability mass function</a> is used. In continuous case - <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a>.</p>
+<p>The main difference between the two is PMF defining probability that a discrete random variable is exactly equal to some value. All the PMF values are non-negative and less than 1. In contrast PDF at any point is not the probability of random variable being equal to that value (probability of getting one value is always equal to <code>0</code> in continuous case, <a href="https://stats.stackexchange.com/questions/60702/why-is-the-probability-zero-for-any-given-value-of-a-normal-distribution">why?</a>). It rather specifies the probability of the random variable falling within a range of values. To get the actual probability of falling in specific range PDF need to be intergrated.</p>
+<p>See more:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_probability_distributions">List of probability distributions</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Probabilistic-models">Probabilistic models<a class="anchor-link" href="#Probabilistic-models">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Probabilistic (stochastic) model is a model that includes one or more random variables. It can look similar to a determinstic model, however incorporating random variables makes the output also random. Frequently the goal is to estimate the probability distribution of the output or in case of bayesian inference. This can be achieved with large number of simulations by Monte Carlo method.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1392,14 +1413,14 @@ h6:hover .anchor-link {
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/ru/author/anton-zemlianskii.html">Антон Землянский</a>
+                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky.html">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/ru/category/overview.html" rel="bookmark" title="Permalink to Overview">
-                    Overview
+                  <a href="https://statsim.com/docs/ru/category/stochastic-modeling.html" rel="bookmark" title="Permalink to Stochastic modeling">
+                    Stochastic modeling
                   </a>
                 </span>
-                <p class="post_date">Sat 15 September 2018</p>
+                <p class="post_date">Mon 29 October 2018</p>
             </div>
         </article>
     </section>

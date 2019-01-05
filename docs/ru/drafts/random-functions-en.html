@@ -3,7 +3,7 @@
 <head>
             <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>Overview</title>
+        <title>3.2 Function of Random Variables</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Anton Zemlyansky">
@@ -30,13 +30,13 @@
         <meta name="twitter:image" content="">
 
     <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/ru/overview.html">
-    <meta name="twitter:title" content="Справочник StatSim ~ Overview">
-    <meta name="twitter:description" content="Обзор">
+    <meta name="twitter:url" content="https://statsim.com/docs/ru/drafts/random-functions-en.html">
+    <meta name="twitter:title" content="Справочник StatSim ~ 3.2 Function of Random Variables">
+    <meta name="twitter:description" content="How to use a random variable in your model, function of random variables, accumulators, using random variable as a parameter">
 
     <!-- Facebook Meta Data -->
-    <meta property="og:title" content="Справочник StatSim ~ Overview"/>
-    <meta property="og:description" content="Обзор"/>
+    <meta property="og:title" content="Справочник StatSim ~ 3.2 Function of Random Variables"/>
+    <meta property="og:description" content="How to use a random variable in your model, function of random variables, accumulators, using random variable as a parameter"/>
     <meta property="og:image" content=""/>
 </head>
 
@@ -75,7 +75,7 @@
 
         <h2>Categories</h2>
         <ul class="navbar">
-                <li class="active"><a
+                <li><a
                         href="https://statsim.com/docs/ru/category/overview.html">Overview</a></li>
         </ul>
 
@@ -92,11 +92,11 @@
     <section id="content">
         <article>
             <h2 class="post_title post_detail">
-              Overview
+              3.2 Function of Random Variables
             </h2>
             <div class="entry-content blog-post">
               <div class="post-summary">
-                <p>Обзор</p>
+                <p>How to use a random variable in your model, function of random variables, accumulators, using random variable as a parameter</p>
               </div>
               <style type="text/css">/*!
 *
@@ -1245,7 +1245,7 @@ h6:hover .anchor-link {
 </style>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
@@ -1259,8 +1259,70 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>StatSim</em> is a multipurpose app. It wraps <a href="http://webppl.org/">WebPPL</a>, a probabilistic programming language, in a user-friendly graphical interface based on <a href="https://vuejs.org/">Vue.js</a> and a couple of additional libraries. StatSim can be used to create basic programs, however its main purpose is probabilistic simulations and modeling.</p>
-<p>Let's open a simple example that just sums two variables <em>x</em> and <em>y</em> and displays results:</p>
+<p>Most of the time we are not interested in distribution of random variable we just created. That's why the checkbox <code>Show in Output</code> is unchecked by default. What we are interested in is a function of that variable. In other words we need it to be transformed and used as a part of the whole model. The good news are it's as easy as using a regular <code>Data</code> constant. After you created a random variable and chose a name for it, use it elsewhere by its name.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Random-variables-in-expressions">Random variables in expressions<a class="anchor-link" href="#Random-variables-in-expressions">&#182;</a></h2><p>Random variable can be a part of expression. Just compose a formula that incorporates that variable. Expression will automatically have random output and can be used elsewhere as another random variable. Let's create two random variables uniformly distributed on the range between <code>0</code> and <code>10</code> then sum those variables and find square root of the result. Call variables <code>X1</code> and <code>X2</code>, expression that will handle the combined result will be called <code>Y</code>. The formula for the expression:</p>
+<ul>
+<li><code>Math.sqrt(X1 + X2)</code>, where <code>Math.sqrt()</code> is a built-in function that squares value inside the brackets and <code>X1</code> and <code>X2</code> are our uniform random variables</li>
+</ul>
+<p>We will run our model using the <code>Rejection sampling</code> algorithm generating <code>25000</code> samples:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X1%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X2%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22n%22%3A%22Y%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Math.sqrt%28X1%20%2B%20X2%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2225000%22%7D%7D%5D&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+    <div style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
+      <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X1%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X2%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22n%22%3A%22Y%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Math.sqrt%28X1%20%2B%20X2%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2225000%22%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div><br>
+    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X1%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X2%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22n%22%3A%22Y%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Math.sqrt%28X1%20%2B%20X2%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2225000%22%7D%7D%5D" style="margin: 10px 0">Open in StatSim</a>
+  
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Random-variables-in-iterations">Random variables in iterations<a class="anchor-link" href="#Random-variables-in-iterations">&#182;</a></h2><p>When modeling time-dependent models and using accumulators there're two possible cases:</p>
+<ol>
+<li>Random variable is generated on each iteration. Let's say you have 100 time steps and you need to have a random value on each step.</li>
+<li>Random variable is generated once per sample and is kept fixed during iterations. Let's say you generate 1000 samples with 100 iterations on each sample. The random variable is generated only 1000 times. Not 100000 times as in previous case.</li>
+</ol>
+<p>To make a random variable fixed for all iteration cycles choose <code>Samples once</code> checkbox on the bottom of random variable block.</p>
+<p>Let's modify the previous model and make the second variable <code>X2</code> fixed, change number of iterations to 5 and add accumulator block <code>Z</code> that accumulates value <code>Y</code> on each iteration</p>
 
 </div>
 </div>
@@ -1270,7 +1332,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X1%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X2%22%2C%22o%22%3Atrue%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22n%22%3A%22Y%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.sqrt%28X1%20%2B%20X2%29%22%7D%2C%7B%22i%22%3A0%2C%22h%22%3Atrue%2C%22n%22%3A%22Z%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Y%22%2C%22min%22%3A%22%22%2C%22max%22%3A%22%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A%225%22%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%225000%22%7D%7D%5D&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1289,8 +1351,10 @@ h6:hover .anchor-link {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
+    <div style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
+      <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X1%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X2%22%2C%22o%22%3Atrue%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22n%22%3A%22Y%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.sqrt%28X1%20%2B%20X2%29%22%7D%2C%7B%22i%22%3A0%2C%22h%22%3Atrue%2C%22n%22%3A%22Z%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Y%22%2C%22min%22%3A%22%22%2C%22max%22%3A%22%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A%225%22%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%225000%22%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div><br>
+    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X1%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22X2%22%2C%22o%22%3Atrue%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22n%22%3A%22Y%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.sqrt%28X1%20%2B%20X2%29%22%7D%2C%7B%22i%22%3A0%2C%22h%22%3Atrue%2C%22n%22%3A%22Z%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Y%22%2C%22min%22%3A%22%22%2C%22max%22%3A%22%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A%225%22%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%225000%22%7D%7D%5D" style="margin: 10px 0">Open in StatSim</a>
   
 </div>
 
@@ -1303,18 +1367,17 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are 2 key areas of the StatSim window: block stack on the left and preview with results on the right. To actually build a model use the left part. Each model (program) consists of building blocks. Our new simple program just sums two variables and displays results. What we need is two data blocks for each input variable and one expression block that describes a formula: <code>x + y</code>.</p>
-<p>Data blocks can be used as inner, hidden constants or model inputs (model parameters). That determines if the corresponding input element is shown in preview mode and when compiled to system binaries.</p>
+<h2 id="Random-variables-as-parameters">Random variables as parameters<a class="anchor-link" href="#Random-variables-as-parameters">&#182;</a></h2><p>In previous examples we used random variables as parts of expression or accumulators. However it's also possible to use them as parameters of other blocks. You can create a random variable that will set a maximum value for accumulator, or will be a parameter of another variable distribution. Below a random variable <code>X</code> that takes values <code>5, 10, 15, 20</code> with probabilities <code>0.3, 0.3, 0.2, 0.2</code> is used as a parameter of another random variable <code>Y</code> to set its size as a random array with binomial distribution <code>(0.5, 10)</code> of its members. Then expression <code>Z</code> calculates the sum of all values of the array <code>Y</code> and outputs results.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Categorical%22%2C%22n%22%3A%22X%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22ps%22%3A%220.3%2C%200.3%2C%200.2%2C%200.2%22%2C%22vs%22%3A%225%2C%2010%2C%2015%2C%2020%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22Y%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%220.5%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%22X%22%7D%2C%7B%22n%22%3A%22Z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22sum%28Y%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2220000%22%7D%7D%5D&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1327,14 +1390,16 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-    <iframe src="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
+    <div style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
+      <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Categorical%22%2C%22n%22%3A%22X%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22ps%22%3A%220.3%2C%200.3%2C%200.2%2C%200.2%22%2C%22vs%22%3A%225%2C%2010%2C%2015%2C%2020%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22Y%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%220.5%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%22X%22%7D%2C%7B%22n%22%3A%22Z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22sum%28Y%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2220000%22%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div><br>
+    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Categorical%22%2C%22n%22%3A%22X%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22ps%22%3A%220.3%2C%200.3%2C%200.2%2C%200.2%22%2C%22vs%22%3A%225%2C%2010%2C%2015%2C%2020%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22Y%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%220.5%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%22X%22%7D%2C%7B%22n%22%3A%22Z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22sum%28Y%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2220000%22%7D%7D%5D" style="margin: 10px 0">Open in StatSim</a>
   
 </div>
 
@@ -1392,14 +1457,14 @@ h6:hover .anchor-link {
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/ru/author/anton-zemlianskii.html">Антон Землянский</a>
+                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky.html">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/ru/category/overview.html" rel="bookmark" title="Permalink to Overview">
-                    Overview
+                  <a href="https://statsim.com/docs/ru/category/stochastic-modeling.html" rel="bookmark" title="Permalink to Stochastic modeling">
+                    Stochastic modeling
                   </a>
                 </span>
-                <p class="post_date">Sat 15 September 2018</p>
+                <p class="post_date">Mon 29 October 2018</p>
             </div>
         </article>
     </section>

@@ -1,5 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>StatSim Documentation - Modeling</title><link href="https://statsim.com/docs/" rel="alternate"></link><link href="https://statsim.com/docs/feeds/modeling.atom.xml" rel="self"></link><id>https://statsim.com/docs/</id><updated>2018-10-21T20:00:00+02:00</updated><entry><title>Models and Projects</title><link href="https://statsim.com/docs/models.html" rel="alternate"></link><published>2018-10-21T20:00:00+02:00</published><updated>2018-10-21T20:00:00+02:00</updated><author><name>Anton Zemlyansky</name></author><id>tag:statsim.com,2018-10-21:/docs/models.html</id><summary type="html">&lt;p&gt;Introduction to StatSim models&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>3.0 Stochastic modeling</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Anton Zemlyansky">
+
+        <link rel="shortcut icon" href="">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="StatSim Documentation">
+        <meta itemprop="image" content="">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="https://statsim.com/docs/theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://statsim.com/docs/theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="https://statsim.com/docs/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="StatSim Documentation ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:image" content="">
+
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:url" content="https://statsim.com/docs/stochastic-modeling.html">
+    <meta name="twitter:title" content="StatSim Documentation ~ 3.0 Stochastic modeling">
+    <meta name="twitter:description" content="How to deal with uncertainty, think in probabilities and work with random variables">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="StatSim Documentation ~ 3.0 Stochastic modeling"/>
+    <meta property="og:description" content="How to deal with uncertainty, think in probabilities and work with random variables"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <a href="https://statsim.com/docs/theme/../">
+      <img src="https://statsim.com/docs/theme/images/statsim-logo.png" style="width: 130px">
+    </a>
+    <!--<center><a href="https://statsim.com/docs"><img id="avatar" src=""></a></center>-->
+    <h1>StatSim Documentation</h1>
+    <a href="https://statsim.com/docs/theme/../">English</>
+    <br>
+    <a href="https://statsim.com/docs/theme/../ru/">Russian</>
+    <br>
+
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/statsimcom" target="_blank"><img
+                        src="https://statsim.com/docs/theme/images/icons/twitter.png"></a>
+                <a href="https://www.facebook.com/statsim" target="_blank"><img
+                        src="https://statsim.com/docs/theme/images/icons/facebook.png"></a>
+                <a href="https://github.com/statsim" target="_blank"><img
+                        src="https://statsim.com/docs/theme/images/icons/github.png"></a>
+            <a href="https://statsim.com/docs/feeds/all.atom.xml" rel="alternate">
+                <img src="https://statsim.com/docs/theme/images/icons/rss.png"></a>
+    </p>
+
+        <h2>Categories</h2>
+        <ul class="navbar">
+                <li><a
+                        href="https://statsim.com/docs/category/deterministic-models.html">Deterministic models</a></li>
+                <li><a
+                        href="https://statsim.com/docs/category/inference.html">Inference</a></li>
+                <li><a
+                        href="https://statsim.com/docs/category/overview.html">Overview</a></li>
+                <li class="active"><a
+                        href="https://statsim.com/docs/category/stochastic-modeling.html">Stochastic modeling</a></li>
+        </ul>
+
+        <h2 class="blog_roll_link"><br/>LINKS</h2>
+        <ul class="navbar">
+                <li><a href="https://statsim.com/">StatSim</a></li>
+                <li><a href="https://analyze.li">Analyze.li</a></li>
+        </ul>
+
+</aside>
+
+<!-- Content -->
+<article>
+    <section id="content">
+        <article>
+            <h2 class="post_title post_detail">
+              3.0 Stochastic modeling
+            </h2>
+            <div class="entry-content blog-post">
+              <div class="post-summary">
+                <p>How to deal with uncertainty, think in probabilities and work with random variables</p>
+              </div>
+              <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -361,7 +466,7 @@ div.unrecognized_cell .inner_cell a:hover {
   text-decoration: none;
 }
 @media (max-width: 540px) {
-  div.unrecognized_cell &gt; div.prompt {
+  div.unrecognized_cell > div.prompt {
     display: none;
   }
 }
@@ -414,19 +519,19 @@ div.input_prompt {
   color: #303F9F;
   border-top: 1px solid transparent;
 }
-div.input_area &gt; div.highlight {
+div.input_area > div.highlight {
   margin: 0.4em;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-div.input_area &gt; div.highlight &gt; pre {
+div.input_area > div.highlight > pre {
   margin: 0px;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-/* The following gets added to the &lt;head&gt; if it is detected that the user has a
+/* The following gets added to the <head> if it is detected that the user has a
  * monospace font with inconsistent normal/bold/italic height.  See
  * notebookmain.js.  Such fonts will have keywords vertically offset with
  * respect to the rest of the text.  The user should select a better font.
@@ -487,7 +592,7 @@ div.input_area &gt; div.highlight &gt; pre {
 }
 /*
 
-Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 Adapted from GitHub theme
 
 */
@@ -731,7 +836,7 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
-div.output_area .mglyph &gt; img {
+div.output_area .mglyph > img {
   max-width: none;
 }
 /* This is needed to protect the pre formating from global settings such
@@ -969,7 +1074,7 @@ div.text_cell {
   align-items: stretch;
 }
 @media (max-width: 540px) {
-  div.text_cell &gt; div.prompt {
+  div.text_cell > div.prompt {
     display: none;
   }
 }
@@ -1041,8 +1146,8 @@ h6:hover .anchor-link {
   font-size: 100%;
   font-style: italic;
 }
-&lt;/style&gt;
-&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
@@ -1106,8 +1211,8 @@ h6:hover .anchor-link {
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -1143,117 +1248,146 @@ h6:hover .anchor-link {
 .ansi-white-intense-bg { background-color: #A1A6B2; }
 
 .ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;open&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;./open&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+</style>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
+</pre></div>
 
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+    </div>
+</div>
+</div>
 
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;blockquote&gt;&lt;p&gt;"All models are wrong but some are useful"&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Models describe relationship between variables and how output is generated. A statistical model represents data generation process that generally approximates some real-life phenomena. Creating models in StatSim is like programming in the browser. Or strictly speaking &lt;a href="https://en.wikipedia.org/wiki/Probabilistic_programming_language"&gt;probabilistic programming&lt;/a&gt; in the browser.&lt;/p&gt;
-&lt;p&gt;A new model 'Main' is initialized automatically when you create a new project or fresh-start the app. Usually you need only one model in the project. However each StatSim project can include multiple models. It's possible to call one model from another dividing the project in logical parts connected between each other.&lt;/p&gt;
-&lt;p&gt;Models inputs are declared as data blocks with "Use as parameter checkbox" activated. Such parameters can be used later when calling the model as a function or using it as a probability distribution.&lt;/p&gt;
-&lt;p&gt;If a model returns a scalar value in &lt;code&gt;Determinstic&lt;/code&gt; simulation it behaves as a function when called from another place. To create a new model, find a small icon with three dots &lt;code&gt;⦁ ⦁ ⦁&lt;/code&gt; just near the current model tab.  Example of two models, one of them called &lt;code&gt;lin&lt;/code&gt; behaves as a linear function that takes &lt;code&gt;x&lt;/code&gt;, and returns a &lt;code&gt;a * x + b&lt;/code&gt;. Then it's called from the main model as a function.&lt;/p&gt;
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>All models discussed before were basically regular programs. They take input and produce deterministic output. Deterministic here means no matter how many times you rerun the model, or repeat the experiment, you get the same output for same input. Determinstic models are very useful, however in real-world we ofter deal with uncertainty. It means that eah time you can't be 100% sure about the outcome, even knowing all the input parameters. The good news is we know how to reason and work with uncertainty - using probability theory. The bad news is probability theory is not really obvious and has some caveats.</p>
 
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="nx"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-the-heck-is-probability">What the heck is probability<a class="anchor-link" href="#What-the-heck-is-probability">&#182;</a></h2><p>The main problem with studying probability theory is actually understanding what is actually a probability. It seems like an obvious thing to define, but it's not.</p>
 
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Probability-as-a-frequency">Probability as a frequency<a class="anchor-link" href="#Probability-as-a-frequency">&#182;</a></h2><p>A lot of books about probability theory, especially the old ones, contain only one definition of probability as the limiting frequency of an event. In those books you can find canonical examples with non-biased coins or 52 playing cards. Probability in such cases described as a frequency. In other words how many times an event appear compared to total number of experiment repetitions, assuming the experiment is repeatedly performed under the same conditions infinitely many times. Mathematically such concept can be formulated as</p>
+$$P(Event) = \lim_{N \to \infty} \frac{N\tiny Event}{N}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Probability-as-a-measure-of-belief">Probability as a measure of belief<a class="anchor-link" href="#Probability-as-a-measure-of-belief">&#182;</a></h2><p>There're events we can't reason about in terms of frequency. They are too rare or have happened in the past. It's just impossible to use the formula below to describe their uncertainty, however using the probability theory still seems like a good choice to work with such events. Let's use one of the basic examples - throwing a coin. Assume that we performed infinitely big number of experiments with that coins and know that the coin is not biased or in a frequentist sence probability of falling for each side top is 1/2. After throwing the coin one player looks at the result and see that it's Heads. For another player the result is still hidden. What is the probability of the result being Heads in such case?</p>
 
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Kolmogorov's-probability">Kolmogorov's probability<a class="anchor-link" href="#Kolmogorov's-probability">&#182;</a></h2><p>Both point of views on the probability as a frequency or as a measure of belief are very natural and easy to stick to. However they both have their own drawbacks. Mathematically stronger and unifying definition of probability was proposed by Kolmogorov. Kolmogorov's probability is just a value that satisfies 3 axioms:</p>
+<ol>
+<li>$ 0 \leq P(E) \leq 1 $, where E is event</li>
+<li>$ P(S) = 1 $, where S is a <a href="https://en.wikipedia.org/wiki/Sample_space">sample space</a></li>
+<li>$ P \left( \bigcup\limits_{i=1}^{\infty} E_{i}\right) = \sum\limits_{i=1}^{\infty} P(E_{i})$</li>
+</ol>
+<p>In other words, we assume that for each event E from the sample space there exist a number P(E) called the probability of event E, such that:</p>
+<ol>
+<li>It can't be less than 0 or more than 1</li>
+<li>Probability of sample space equals to 1 </li>
+<li>Probability of appearing of at least one event from a sequence of <a href="https://en.wikipedia.org/wiki/Mutual_exclusivity">mutually exclusive events</a> is just the sum of their probabilities</li>
+</ol>
+<p>Such axiomatic approach satisfies both definitions. <a href="https://en.wikipedia.org/wiki/Probability_axioms">Read more</a></p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Random-variables">Random variables<a class="anchor-link" href="#Random-variables">&#182;</a></h2><p>Sometimes outcomes of an experiment is a numerical value, sometimes it's not but it can be trasformed to a number. Some transformations can be more interesting that actual event and it value. When tossing 2 dice in a board game, it's more important to know the sum of dice not the individual values. A quantity, or more formally a function, that assigns a numerical value to each outcome of the experiment called a random variable. Because random variables are based on random outcomes we can also use probability theory to work with them. In modeling it's much easier to deal with random variables rather than raw events.</p>
 
-&lt;div class="output_area"&gt;
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>See also:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Conditional_probability">Conditional probability</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Independence_(probability_theory">Independence</a></li>
+</ul>
 
-    &lt;div class="prompt output_prompt"&gt;Out[2]:&lt;/div&gt;
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Probability-distributions">Probability distributions<a class="anchor-link" href="#Probability-distributions">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Probability distribution is a mathematical function that provides the probabilities of occurrence of different possible outcomes in an experiment. <a href="https://en.wikipedia.org/wiki/Probability_distribution">source</a></p>
+</blockquote>
+<p>When incorporating uncertanty in a model, you'll definetely use one or another probability distribution to describe a random phenomenon. The same as random variables, probability distributions are divided on two groups - discrete and continuous. To characterize discrete distributions <a href="https://en.wikipedia.org/wiki/Probability_mass_function">probability mass function</a> is used. In continuous case - <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a>.</p>
+<p>The main difference between the two is PMF defining probability that a discrete random variable is exactly equal to some value. All the PMF values are non-negative and less than 1. In contrast PDF at any point is not the probability of random variable being equal to that value (probability of getting one value is always equal to <code>0</code> in continuous case, <a href="https://stats.stackexchange.com/questions/60702/why-is-the-probability-zero-for-any-given-value-of-a-normal-distribution">why?</a>). It rather specifies the probability of the random variable falling within a range of values. To get the actual probability of falling in specific range PDF need to be intergrated.</p>
+<p>See more:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_probability_distributions">List of probability distributions</a></li>
+</ul>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Probabilistic-models">Probabilistic models<a class="anchor-link" href="#Probabilistic-models">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Probabilistic (stochastic) model is a model that includes one or more random variables. It can look similar to a determinstic model, however incorporating random variables makes the output also random. Frequently the goal is to estimate the probability distribution of the output or in case of bayesian inference. This can be achieved with large number of simulations by Monte Carlo method.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre>
+</pre></div>
 
-&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+    </div>
+</div>
+</div>
 
-    &lt;iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"&gt;&lt;/iframe&gt;&lt;br&gt;
-    &lt;a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22n%22%3A%22output%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22lin%28input%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%220%22%7D%2C%7B%22n%22%3A%22result%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%224%20%2A%20x%20%2B%207%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22deterministic%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0"&gt;Open in StatSim&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Other simulation methods make models to be exported as probability distributions. Such distributions will be automatically loaded in a list of default distributions in Random Variable blocks of other models.&lt;/p&gt;
-&lt;p&gt;Lets change how lin model behaves and instead of return scalar &lt;code&gt;a * x + b&lt;/code&gt; return a gaussian distribution centered around &lt;code&gt;a * x + b&lt;/code&gt; with a standard deviation equal to &lt;code&gt;x / 2&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Be careful with creating many interconnected probabilistic models. Number of samples to be generated grows exponentially.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="nx"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-
-    &lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
-
-
-
-&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
-
-    &lt;iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D" width="900" height="600"&gt;&lt;/iframe&gt;&lt;br&gt;
-    &lt;a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22input%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%2210%22%7D%2C%7B%22d%22%3A%22lin%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22x%22%3A%22input%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22Main%20model%20calls%20second%20model%20%60lin%60%20as%20a%20function%20lin%28input%29.%20Main%20also%20has%20its%20own%20input%20parameter%3A%22%2C%22s%22%3A1%2C%22m%22%3A%22HMC%22%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22b%22%3A%22200%22%7D%7D%2C%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%221%22%7D%2C%7B%22d%22%3A%22Gaussian%22%2C%22n%22%3A%22output%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22mu%22%3A%224%20%2A%20x%20%2B%207%22%2C%22sigma%22%3A%22x%20%2F%205%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22lin%22%2C%22e%22%3A%22Takes%20x%2C%20returns%20a%20%2A%20x%20%2B%20b.%22%2C%22m%22%3A%22MCMC%22%2C%22s%22%3A1%7D%2C%22met%22%3A%7B%22sm%22%3A%222000%22%2C%22l%22%3A%22200%22%7D%7D%5D" style="margin: 20px 0"&gt;Open in StatSim&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
+</div>
  
 
 
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
@@ -1280,5 +1414,26 @@ h6:hover .anchor-link {
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;
-</content></entry></feed>
+</script>
+
+            </div>
+            <div class="post_list">
+                <span>By </span>
+                <a href="https://statsim.com/docs/author/anton-zemlyansky.html">Anton Zemlyansky</a>
+                <span> in </span>
+                <span class="post_category">
+                  <a href="https://statsim.com/docs/category/stochastic-modeling.html" rel="bookmark" title="Permalink to Stochastic modeling">
+                    Stochastic modeling
+                  </a>
+                </span>
+                <p class="post_date">Mon 29 October 2018</p>
+            </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+
+
+</body>
+</html>
