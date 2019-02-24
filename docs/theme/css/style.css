@@ -141,9 +141,9 @@ aside {
   position: fixed;
   top: 0; left: 0;
   padding: 30px;
-  background-color: #000;
-  color: white;
-  box-shadow: 0 0 3px black;
+  background-color: white;
+  box-shadow: 0 0 50px #DDD;
+  color: #222;
   text-align: center;
   padding-top: 1%;
   background-size: cover;
@@ -158,6 +158,11 @@ aside > h2 {
   text-transform: uppercase;
   font-size: 14px; 
   margin-bottom: 5px;
+}
+
+aside .logo {
+  width: 40px;
+  margin: 50px 0 20px 0;
 }
 
 #avatar {
@@ -177,14 +182,18 @@ aside > h2 {
   box-shadow: 0px 0px 5px 3px white;
 }
 
-.social
-{
+.social {
   display: inline-block;
-  margin-top: 40px;
 }
 
-.nav
-{
+.social img {
+  filter: invert(100%);
+  opacity: .2;
+  max-width: 25px;
+  margin: 7px;
+}
+
+.nav {
   display: block;
   margin-left: -30px;
   margin-right: -30px;

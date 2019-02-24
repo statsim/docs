@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Справочник StatSim</title><link href="https://statsim.com/docs/ru/" rel="alternate"></link><link href="https://statsim.com/docs/feeds/all.atom.xml" rel="self"></link><id>https://statsim.com/docs/ru/</id><updated>2018-09-15T20:00:00+02:00</updated><entry><title>Overview</title><link href="https://statsim.com/docs/ru/overview.html" rel="alternate"></link><published>2018-09-15T20:00:00+02:00</published><updated>2018-09-15T20:00:00+02:00</updated><author><name>Антон Землянский</name></author><id>tag:statsim.com,2018-09-15:/docs/ru/overview.html</id><summary type="html">&lt;p&gt;Обзор&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Справочник StatSim</title><link href="https://statsim.com/docs/ru/" rel="alternate"></link><link href="https://statsim.com/docs/feeds/all.atom.xml" rel="self"></link><id>https://statsim.com/docs/ru/</id><updated>2018-09-15T20:00:00+02:00</updated><entry><title>Overview</title><link href="https://statsim.com/docs/ru/overview/" rel="alternate"></link><published>2018-09-15T20:00:00+02:00</published><updated>2018-09-15T20:00:00+02:00</updated><author><name>Антон Землянский</name></author><id>tag:statsim.com,2018-09-15:/docs/ru/overview/</id><summary type="html">&lt;p&gt;Обзор&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1289,7 +1289,7 @@ h6:hover .anchor-link {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content></entry><entry><title>1.0 Overview</title><link href="https://statsim.com/docs/ru/../overview.html" rel="alternate"></link><published>2018-09-15T20:00:00+02:00</published><updated>2018-09-15T20:00:00+02:00</updated><author><name>Anton Zemlyansky</name></author><id>tag:statsim.com,2018-09-15:/docs/ru/../overview.html</id><summary type="html">&lt;p&gt;Overview of StatSim&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+</content></entry><entry><title>1.0 Overview</title><link href="https://statsim.com/docs/ru/../overview/" rel="alternate"></link><published>2018-09-15T20:00:00+02:00</published><updated>2018-09-15T20:00:00+02:00</updated><author><name>Anton Zemlyansky</name></author><id>tag:statsim.com,2018-09-15:/docs/ru/../overview/</id><summary type="html">&lt;p&gt;Overview of StatSim&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *

@@ -44,7 +44,7 @@
 <!-- Sidebar -->
 <aside>
     <a href="https://statsim.com/docs/ru/../theme/../">
-      <img src="https://statsim.com/docs/ru/../theme/images/statsim-logo.png" style="width: 130px">
+      <img src="https://statsim.com/docs/ru/../theme/images/statsim-logo.png" class="logo">
     </a>
     <!--<center><a href="https://statsim.com/docs/ru"><img id="avatar" src=""></a></center>-->
     <h1>Справочник StatSim</h1>
@@ -76,7 +76,7 @@
         <h2>Categories</h2>
         <ul class="navbar">
                 <li><a
-                        href="https://statsim.com/docs/ru/category/overview.html">Overview</a></li>
+                        href="https://statsim.com/docs/ru/category/overview/">Overview</a></li>
         </ul>
 
         <h2 class="blog_roll_link"><br/>LINKS</h2>
@@ -1245,7 +1245,7 @@ h6:hover .anchor-link {
 </style>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
@@ -1259,23 +1259,55 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Baysian inference is a proccess that connects data with a <a href="https://statsim.com/docs/ru/stochastic-modeling-en.html">probabistic model</a></p>
+<p>In general, statistical inference is used to draw conclusions about unknown quantities based on observed real-world data. Baysian inference is a proccess of using such data to determine unknown parameters of a <a href="https://statsim.com/docs/ru/stochastic-modeling-en.html">probabistic model</a> and predict new values using probability distributions as a measure of uncertainty. The process is often called model fitting.</p>
+<p>There are multiple ways to fit a model with their own pros and contras. We will be using simulations as our method of choice because of its flexibility and relative simplicity.</p>
+<h1 id="Bayes'-theorem">Bayes' theorem<a class="anchor-link" href="#Bayes'-theorem">&#182;</a></h1><p>Bayesian inference is based on the Bayes' theorem. To understand it we should refresh our knowledge of <a href="https://statsim.com/docs/ru/conditioning-en.html">conditional probability</a>. According to the definition, conditional probability of the event(hypothesis) $A$ given $B$ equals to</p>
+$$ P(A \mid B) = \frac{P(A \cap B)}{P(B)} $$<p>where $P(A \cap B)$ is the probability that both events A and B occur. It could be useful to think about probabilities graphically:
+<br><img src="images/conditioning-1.png" width="500"/><br>
+We can find conditional probability of the event $B$ given the event $A$ using the same definition:</p>
+$$ P(B \mid A) = \frac{P(B \cap A)}{P(A)} $$<p>Here comes the most interesting part. Knowing that $P(B \cap A)$ is equal to $P(A \cap B)$ we can combine these two formulas to get:</p>
+$$ P(A \mid B)P(B) = P(B \mid A)P(A) $$<p>After moving $P(B)$ to the left side of the equation we get the common form of the Bayes' theorem:
+<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bayes%27_Theorem_MMB_01.jpg/440px-Bayes%27_Theorem_MMB_01.jpg" width="500"/><br></p>
+<p>The best thing about the Bayes' theorem is the ability to get inverse conditional probability</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Law-of-total-probability">Law of total probability<a class="anchor-link" href="#Law-of-total-probability">&#182;</a></h1><p>If we have multiple <a href="https://en.wikipedia.org/wiki/Pairwise_disjoint">disjoint</a> events(hypothesis) $A \tiny n$ whose union is the entire sample space, we can find a probability of any event $B$ as a sum of probabilities of all events ${A \tiny n} \cap B : n = 1,2,3,4...$ or alternatively</p>
+$$ P(B) = \sum\limits_{n} P(B \mid {A \tiny n})P({A \tiny n}) $$
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Extended-form-of-the-Bayes-theorem">Extended form of the Bayes theorem<a class="anchor-link" href="#Extended-form-of-the-Bayes-theorem">&#182;</a></h1><p>Usually we don't know $P(B)$ in the Bayes' formula. Using the law of total probability we can rewrite the Bayes' formula as:</p>
+$$ P({A \tiny i} \mid B) = \frac{P(B \mid {A \tiny i})P({A \tiny i})}{\sum\limits_{n} P(B \mid {A \tiny n})P({A \tiny n})} $$<p>With these formulas we can already solve lots of probabilistic problems analytically (<a href="https://www.statisticshowto.datasciencecentral.com/bayes-theorem-problems/">examples</a>)</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Bayesian-inference">Bayesian inference<a class="anchor-link" href="#Bayesian-inference">&#182;</a></h1><p>Using bayesian approach we can reason about unknown model parameters as random variables. In machine learning literature parameters are usually denoted as $\theta$ and $y$ denotes data. In bayesian inference, what we are interested in is the probability distribution of model parameters given observed data $p(\theta \mid y)$ or probability distribution of future data given the data we already have $p(\hat{y} \mid y)$. Using the Bayes' theorem we can find $p(\theta \mid y)$:</p>
+$$ p(\theta \mid y) = \frac{p(y \mid \theta)p(\theta)}{p(y)} $$<p>According to the law of total probability in discrete case $p(y) = \sum\limits_{n}p(y \mid \theta)p(\theta)$ is a sum over all possible values of the model parameter $\theta$<br>
+In case of continuous $\theta$ we have $p(y) = \int p(y \mid \theta)p(\theta)d\theta$<br></p>
+<p>Where:</p>
+<ul>
+<li>$p(y)$ is prior distribution of $\theta$</li>
+<li>$p(y \mid \theta)$ is likelihood of the data</li>
+<li>$p(\theta \mid y)$ is posterior distribution we are interested in</li>
+</ul>
+<p>Sometimes the factor $p(y)$ is emitted because it doesn't depend on $\theta$ so the formula becomes</p>
+$$ p(\theta \mid y) \propto p(y \mid \theta)p(\theta) $$<p>Where $\propto$ means "proportional to". When you design a model in StatSim, the program converts it to the probabilistic model $p(y, \theta)$ and then use different algorithms to sample from the posterior distribution $p(\theta \mid y)$</p>
+<p>...</p>
+
+</div>
+</div>
 </div>
  
 
@@ -1312,10 +1344,10 @@ h6:hover .anchor-link {
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky.html">Anton Zemlyansky</a>
+                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky/">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/ru/category/inference.html" rel="bookmark" title="Permalink to Inference">
+                  <a href="https://statsim.com/docs/ru/category/inference/" rel="bookmark" title="Permalink to Inference">
                     Inference
                   </a>
                 </span>
