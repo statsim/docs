@@ -47,7 +47,7 @@ IGNORE_FILES = ['*-checkpoint.ipynb', '*.md', '*.html']
 THEME = 'themes/pelican-blue'
 DISPLAY_FOOTER = False
 DISPLAY_SUMMARY = True
-ARTICLE_ORDER_BY = 'reversed-date'
+ARTICLE_ORDER_BY = 'filename'
 DEFAULT_PAGINATION = False
 
 ARTICLE_URL = '{slug}/'
