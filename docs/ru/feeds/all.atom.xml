@@ -2436,7 +2436,7 @@ h6:hover .anchor-link {
 &lt;/style&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;open&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;./open&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2458,7 +2458,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-javascript"&gt;&lt;pre&gt;&lt;span class="nx"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2474,14 +2474,16 @@ h6:hover .anchor-link {
 
 &lt;div class="output_area"&gt;
 
-    &lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[2]:&lt;/div&gt;
 
 
 
 &lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
 
-    &lt;iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"&gt;&lt;/iframe&gt;&lt;br&gt;
-    &lt;a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0"&gt;Open in StatSim&lt;/a&gt;
+    &lt;div style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;"&gt;
+      &lt;iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"&gt;&lt;/iframe&gt;
+    &lt;/div&gt;&lt;br&gt;
+    &lt;a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 10px 0"&gt;Open in StatSim&lt;/a&gt;
   
 &lt;/div&gt;
 

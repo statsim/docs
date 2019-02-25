@@ -28,6 +28,14 @@
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="">
         <meta name="twitter:image" content="">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7770107-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-7770107-2');
+        </script>
 
     <meta name="twitter:creator" content="">
     <meta name="twitter:url" content="https://statsim.com/docs/overview/">
@@ -1251,7 +1259,7 @@ h6:hover .anchor-link {
 </style>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
@@ -1273,7 +1281,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
@@ -1289,14 +1297,16 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
+    <div style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
+      <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div><br>
+    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 10px 0">Open in StatSim</a>
   
 </div>
 

@@ -44,7 +44,7 @@ I18N_SUBSITES = {
 
 IGNORE_FILES = ['*-checkpoint.ipynb', '*.md', '*.html']
 
-THEME = 'themes/pelican-blue'
+THEME = '../theme'
 DISPLAY_FOOTER = False
 DISPLAY_SUMMARY = True
 ARTICLE_ORDER_BY = 'filename'
