@@ -17,19 +17,29 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
         <!-- Style Meta Data -->
-        <link rel="stylesheet" href="/ru/../theme/css/style.css" type="text/css"/>
-        <link rel="stylesheet" href="/ru/../theme/css/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/pygments.css" type="text/css"/>
 
         <!-- Feed Meta Data -->
+            <link href="https://statsim.com/docs/ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Справочник StatSim ATOM Feed"/>
 
         <!-- Twitter Feed -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="statsimcom">
         <meta name="twitter:image" content="">
 
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7770107-2"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-7770107-2');
+          </script>
 
     <meta name="twitter:creator" content="statsimcom">
-    <meta name="twitter:url" content="/ru/drafts/bayesian-inference-en.html">
+    <meta name="twitter:url" content="https://statsim.com/docs/ru/drafts/bayesian-inference-en.html">
     <meta name="twitter:title" content="Справочник StatSim ~ 4.0 Bayesian inference">
     <meta name="twitter:description" content="Finding model parameters using Bayesian inference">
 
@@ -42,13 +52,13 @@
 <body>
 <!-- Sidebar -->
 <aside>
-    <a href="/ru">
-      <img src="/images/logo.png" class="logo">
+    <a href="https://statsim.com/docs/ru">
+      <img src="https://statsim.com/docs/images/logo.png" class="logo">
     </a>
     <h1>Справочник StatSim</h1>
-    <a href="/">English</a>
+    <a href="https://statsim.com/docs/">English</a>
     <br>
-    <a href="/ru/">Russian</a>
+    <a href="https://statsim.com/docs/ru/">Russian</a>
     <br>
 
     <nav class="nav">
@@ -61,11 +71,13 @@
 
     <p class="social">
                 <a href="https://twitter.com/statsimcom" target="_blank"><img
-                        src="/ru/../theme/images/icons/twitter.png"></a>
+                        src="https://statsim.com/docs/ru/../theme/images/icons/twitter.png"></a>
                 <a href="https://www.facebook.com/statsim" target="_blank"><img
-                        src="/ru/../theme/images/icons/facebook.png"></a>
+                        src="https://statsim.com/docs/ru/../theme/images/icons/facebook.png"></a>
                 <a href="https://github.com/statsim" target="_blank"><img
-                        src="/ru/../theme/images/icons/github.png"></a>
+                        src="https://statsim.com/docs/ru/../theme/images/icons/github.png"></a>
+            <a href="https://statsim.com/docs/ru/feeds/all.atom.xml" rel="alternate">
+                <img src="https://statsim.com/docs/ru/../theme/images/icons/rss.png"></a>
     </p>
 
         <a class="twitter-follow-button"
@@ -93,7 +105,7 @@
         <h2>Categories</h2>
         <ul class="navbar">
                 <li><a
-                        href="/ru/category/overview/">Overview</a></li>
+                        href="https://statsim.com/docs/ru/category/overview/">Overview</a></li>
         </ul>
 
         <h2 class="blog_roll_link"><br/>LINKS</h2>
@@ -1276,11 +1288,11 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In general, statistical inference is used to draw conclusions about unknown quantities based on observed real-world data. Baysian inference is a proccess of using such data to determine unknown parameters of a <a href="/ru/stochastic-modeling-en.html">probabistic model</a> and predict new values using probability distributions as a measure of uncertainty. The process is often called model fitting.</p>
+<p>In general, statistical inference is used to draw conclusions about unknown quantities based on observed real-world data. Baysian inference is a proccess of using such data to determine unknown parameters of a <a href="https://statsim.com/docs/ru/stochastic-modeling-en.html">probabistic model</a> and predict new values using probability distributions as a measure of uncertainty. The process is often called model fitting.</p>
 <p>There are multiple ways to fit a model with their own pros and contras. We will be using simulations as our method of choice because of its flexibility and relative simplicity.</p>
-<h1 id="Bayes'-theorem">Bayes' theorem<a class="anchor-link" href="#Bayes'-theorem">&#182;</a></h1><p>Bayesian inference is based on the Bayes' theorem. To understand it we should refresh our knowledge of <a href="/ru/conditioning-en.html">conditional probability</a>. According to the definition, conditional probability of the event(hypothesis) $A$ given $B$ equals to</p>
+<h1 id="Bayes'-theorem">Bayes' theorem<a class="anchor-link" href="#Bayes'-theorem">&#182;</a></h1><p>Bayesian inference is based on the Bayes' theorem. To understand it we should refresh our knowledge of <a href="https://statsim.com/docs/ru/conditioning-en.html">conditional probability</a>. According to the definition, conditional probability of the event(hypothesis) $A$ given $B$ equals to</p>
 $$ P(A \mid B) = \frac{P(A \cap B)}{P(B)} $$<p>where $P(A \cap B)$ is the probability that both events A and B occur. It could be useful to think about probabilities graphically:
-<br><img src="/ru/../images/conditioning-1.png" width="500"/><br>
+<br><img src="https://statsim.com/docs/ru/../images/conditioning-1.png" width="500"/><br>
 We can find conditional probability of the event $B$ given the event $A$ using the same definition:</p>
 $$ P(B \mid A) = \frac{P(B \cap A)}{P(A)} $$<p>Here comes the most interesting part. Knowing that $P(B \cap A)$ is equal to $P(A \cap B)$ we can combine these two formulas to get:</p>
 $$ P(A \mid B)P(B) = P(B \mid A)P(A) $$<p>After moving $P(B)$ to the left side of the equation we get the common form of the Bayes' theorem:
@@ -1361,10 +1373,10 @@ $$ p(\theta \mid y) \propto p(y \mid \theta)p(\theta) $$<p>Where $\propto$ means
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="/ru/author/anton-zemlyansky/">Anton Zemlyansky</a>
+                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky/">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="/ru/category/inference/" rel="bookmark" title="Permalink to Inference">
+                  <a href="https://statsim.com/docs/ru/category/inference/" rel="bookmark" title="Permalink to Inference">
                     Inference
                   </a>
                 </span>
