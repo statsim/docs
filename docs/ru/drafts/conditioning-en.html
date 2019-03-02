@@ -17,28 +17,19 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
         <!-- Style Meta Data -->
-        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/style.css" type="text/css"/>
-        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="/ru/../theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="/ru/../theme/css/pygments.css" type="text/css"/>
 
         <!-- Feed Meta Data -->
-            <link href="https://statsim.com/docs/ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-                  title="Справочник StatSim ATOM Feed"/>
 
         <!-- Twitter Feed -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="">
+        <meta name="twitter:site" content="statsimcom">
         <meta name="twitter:image" content="">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7770107-2"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-7770107-2');
-        </script>
 
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/ru/drafts/conditioning-en.html">
+
+    <meta name="twitter:creator" content="statsimcom">
+    <meta name="twitter:url" content="/ru/drafts/conditioning-en.html">
     <meta name="twitter:title" content="Справочник StatSim ~ 3.3 Conditioning">
     <meta name="twitter:description" content="Conditional probability, conditional distributions, rejecting specific samples">
 
@@ -51,16 +42,14 @@
 <body>
 <!-- Sidebar -->
 <aside>
-    <a href="https://statsim.com/docs/ru/../theme/../">
-      <img src="https://statsim.com/docs/ru/../theme/images/statsim-logo.png" class="logo">
+    <a href="/ru">
+      <img src="/images/logo.png" class="logo">
     </a>
-    <!--<center><a href="https://statsim.com/docs/ru"><img id="avatar" src=""></a></center>-->
     <h1>Справочник StatSim</h1>
-    <a href="https://statsim.com/docs/ru/../theme/../">English</>
+    <a href="/">English</a>
     <br>
-    <a href="https://statsim.com/docs/ru/../theme/../ru/">Russian</>
+    <a href="/ru/">Russian</a>
     <br>
-
 
     <nav class="nav">
         <ul class="list-bare">
@@ -72,19 +61,39 @@
 
     <p class="social">
                 <a href="https://twitter.com/statsimcom" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/twitter.png"></a>
+                        src="/ru/../theme/images/icons/twitter.png"></a>
                 <a href="https://www.facebook.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/facebook.png"></a>
+                        src="/ru/../theme/images/icons/facebook.png"></a>
                 <a href="https://github.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/github.png"></a>
-            <a href="https://statsim.com/docs/ru/feeds/all.atom.xml" rel="alternate">
-                <img src="https://statsim.com/docs/ru/../theme/images/icons/rss.png"></a>
+                        src="/ru/../theme/images/icons/github.png"></a>
     </p>
+
+        <a class="twitter-follow-button"
+           href="https://twitter.com/statsimcom"
+           data-show-count="false"
+           data-lang="en">
+            Follow @twitterdev
+        </a>
+        <script type="text/javascript">
+            window.twttr = (function (d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {
+                        _e: [], ready: function (f) {
+                            t._e.push(f)
+                        }
+                    });
+            }(document, "script", "twitter-wjs"));
+        </script>
 
         <h2>Categories</h2>
         <ul class="navbar">
                 <li><a
-                        href="https://statsim.com/docs/ru/category/overview/">Overview</a></li>
+                        href="/ru/category/overview/">Overview</a></li>
         </ul>
 
         <h2 class="blog_roll_link"><br/>LINKS</h2>
@@ -1253,10 +1262,10 @@ h6:hover .anchor-link {
 </style>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">iframer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./iframer&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1282,9 +1291,9 @@ h6:hover .anchor-link {
 <li>Two mutually inclusive events $A$ and $B$ (mutually inclusive events can overlap or in other words happen in the same time)</li>
 <li>Event $A \cap B$ (intersection of events, or in other words event that corresponds to both events $A$ and $B$ happening simultaniously)</li>
 </ol>
-<p><br><img src="images/conditioning-1.png" width="500"/><br></p>
+<p><br><img src="/ru/../images/conditioning-1.png" width="500"/><br></p>
 <p>If we assume that event B already happened, it becomes our new sample space. And that part of event $B$ that used to represent the intersection of $A$ and $B$ now represent a conditional event $A \mid B$</p>
-<p><br><img src="images/conditioning-2.png" width="420"/><br></p>
+<p><br><img src="/ru/../images/conditioning-2.png" width="420"/><br></p>
 <p>Probability of such event is defined as follows:</p>
 $$ P (A \mid B) = \frac{P(A \cap B)}{P(B)} $$<p>If both events consist of equally likely outcomes we can think about that formula as a proportion of outcomes that fall in both events $A$ and $B$ and outcomes that fall in $B$, event we are conditioning.</p>
 
@@ -1325,10 +1334,10 @@ $$ P (A \mid B) = \frac{P(A \cap B)}{P(B)} $$<p>If both events consist of equall
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22P%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%221%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22ProbAmount%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%22P%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22t%22%3A5%2C%22v%22%3A%22ProbAmount%20%3D%3D%3D%202%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2210000%22%7D%7D%5D&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="nx">iframer</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22P%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%221%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22ProbAmount%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%22P%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22t%22%3A5%2C%22v%22%3A%22ProbAmount%20%3D%3D%3D%202%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2210000%22%7D%7D%5D&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1341,16 +1350,16 @@ $$ P (A \mid B) = \frac{P(A \cap B)}{P(B)} $$<p>If both events consist of equall
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-    <div style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
+    <div class="iframer-wrapper" style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
       <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22P%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%221%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22ProbAmount%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%22P%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22t%22%3A5%2C%22v%22%3A%22ProbAmount%20%3D%3D%3D%202%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2210000%22%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22P%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%221%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22ProbAmount%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%22P%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22t%22%3A5%2C%22v%22%3A%22ProbAmount%20%3D%3D%3D%202%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2210000%22%7D%7D%5D" style="margin: 10px 0">Open in StatSim</a>
+    <a class="iframer-link" href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22d%22%3A%22Uniform%22%2C%22n%22%3A%22P%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22a%22%3A%220%22%2C%22b%22%3A%221%22%7D%2C%22sh%22%3Atrue%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22d%22%3A%22Binomial%22%2C%22n%22%3A%22ProbAmount%22%2C%22o%22%3Afalse%2C%22p%22%3A%7B%22p%22%3A%22P%22%2C%22n%22%3A%2210%22%7D%2C%22sh%22%3Afalse%2C%22t%22%3A0%2C%22dims%22%3A%221%22%7D%2C%7B%22t%22%3A5%2C%22v%22%3A%22ProbAmount%20%3D%3D%3D%202%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Main%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22rejection%22%7D%2C%22met%22%3A%7B%22sm%22%3A%2210000%22%7D%7D%5D" target="_blank" style="margin: 10px 0;">Open in statsim.com</a>
   
 </div>
 
@@ -1367,19 +1376,6 @@ $$ P (A \mid B) = \frac{P(A \cap B)}{P(B)} $$<p>If both events consist of equall
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
  
 
@@ -1416,10 +1412,10 @@ $$ P (A \mid B) = \frac{P(A \cap B)}{P(B)} $$<p>If both events consist of equall
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky/">Anton Zemlyansky</a>
+                <a href="/ru/author/anton-zemlyansky/">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/ru/category/stochastic-modeling/" rel="bookmark" title="Permalink to Stochastic modeling">
+                  <a href="/ru/category/stochastic-modeling/" rel="bookmark" title="Permalink to Stochastic modeling">
                     Stochastic modeling
                   </a>
                 </span>
@@ -1432,5 +1428,12 @@ $$ P (A \mid B) = \frac{P(A \cap B)}{P(B)} $$<p>If both events consist of equall
 <!-- Footer -->
 
 
+<!-- Hide code blocks with specific words -->
+<script>
+  Array
+    .from(document.querySelectorAll('div.input'))
+    .filter(node => /(\/\/\/|\#\#\#|iframer)/i.test(node.innerHTML))
+    .forEach(node => node.style.display = 'none')
+</script>
 </body>
 </html>

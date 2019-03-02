@@ -17,28 +17,19 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
         <!-- Style Meta Data -->
-        <link rel="stylesheet" href="https://statsim.com/docs/theme/css/style.css" type="text/css"/>
-        <link rel="stylesheet" href="https://statsim.com/docs/theme/css/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css"/>
 
         <!-- Feed Meta Data -->
-            <link href="https://statsim.com/docs/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-                  title="StatSim Documentation ATOM Feed"/>
 
         <!-- Twitter Feed -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="">
+        <meta name="twitter:site" content="statsimcom">
         <meta name="twitter:image" content="">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7770107-2"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-7770107-2');
-        </script>
 
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/stochastic-modeling/">
+
+    <meta name="twitter:creator" content="statsimcom">
+    <meta name="twitter:url" content="/stochastic-modeling/">
     <meta name="twitter:title" content="StatSim Documentation ~ 3.0 Stochastic modeling">
     <meta name="twitter:description" content="How to deal with uncertainty, think in probabilities and work with random variables">
 
@@ -51,16 +42,14 @@
 <body>
 <!-- Sidebar -->
 <aside>
-    <a href="https://statsim.com/docs/theme/../">
-      <img src="https://statsim.com/docs/theme/images/statsim-logo.png" class="logo">
+    <a href="">
+      <img src="/images/logo.png" class="logo">
     </a>
-    <!--<center><a href="https://statsim.com/docs"><img id="avatar" src=""></a></center>-->
     <h1>StatSim Documentation</h1>
-    <a href="https://statsim.com/docs/theme/../">English</>
+    <a href="/">English</a>
     <br>
-    <a href="https://statsim.com/docs/theme/../ru/">Russian</>
+    <a href="/ru/">Russian</a>
     <br>
-
 
     <nav class="nav">
         <ul class="list-bare">
@@ -72,25 +61,45 @@
 
     <p class="social">
                 <a href="https://twitter.com/statsimcom" target="_blank"><img
-                        src="https://statsim.com/docs/theme/images/icons/twitter.png"></a>
+                        src="/theme/images/icons/twitter.png"></a>
                 <a href="https://www.facebook.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/theme/images/icons/facebook.png"></a>
+                        src="/theme/images/icons/facebook.png"></a>
                 <a href="https://github.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/theme/images/icons/github.png"></a>
-            <a href="https://statsim.com/docs/feeds/all.atom.xml" rel="alternate">
-                <img src="https://statsim.com/docs/theme/images/icons/rss.png"></a>
+                        src="/theme/images/icons/github.png"></a>
     </p>
+
+        <a class="twitter-follow-button"
+           href="https://twitter.com/statsimcom"
+           data-show-count="false"
+           data-lang="en">
+            Follow @twitterdev
+        </a>
+        <script type="text/javascript">
+            window.twttr = (function (d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {
+                        _e: [], ready: function (f) {
+                            t._e.push(f)
+                        }
+                    });
+            }(document, "script", "twitter-wjs"));
+        </script>
 
         <h2>Categories</h2>
         <ul class="navbar">
                 <li><a
-                        href="https://statsim.com/docs/category/deterministic-models/">Deterministic models</a></li>
+                        href="/category/deterministic-models/">Deterministic models</a></li>
                 <li><a
-                        href="https://statsim.com/docs/category/inference/">Inference</a></li>
+                        href="/category/inference/">Inference</a></li>
                 <li><a
-                        href="https://statsim.com/docs/category/overview/">Overview</a></li>
+                        href="/category/overview/">Overview</a></li>
                 <li class="active"><a
-                        href="https://statsim.com/docs/category/stochastic-modeling/">Stochastic modeling</a></li>
+                        href="/category/stochastic-modeling/">Stochastic modeling</a></li>
         </ul>
 
         <h2 class="blog_roll_link"><br/>LINKS</h2>
@@ -1262,7 +1271,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">iframer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./iframer&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1379,19 +1388,6 @@ $$P(Event) = \lim_{N \to \infty} \frac{N\tiny Event}{N}$$
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
  
 
 
@@ -1427,10 +1423,10 @@ $$P(Event) = \lim_{N \to \infty} \frac{N\tiny Event}{N}$$
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/author/anton-zemlyansky/">Anton Zemlyansky</a>
+                <a href="/author/anton-zemlyansky/">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/category/stochastic-modeling/" rel="bookmark" title="Permalink to Stochastic modeling">
+                  <a href="/category/stochastic-modeling/" rel="bookmark" title="Permalink to Stochastic modeling">
                     Stochastic modeling
                   </a>
                 </span>
@@ -1443,5 +1439,12 @@ $$P(Event) = \lim_{N \to \infty} \frac{N\tiny Event}{N}$$
 <!-- Footer -->
 
 
+<!-- Hide code blocks with specific words -->
+<script>
+  Array
+    .from(document.querySelectorAll('div.input'))
+    .filter(node => /(\/\/\/|\#\#\#|iframer)/i.test(node.innerHTML))
+    .forEach(node => node.style.display = 'none')
+</script>
 </body>
 </html>

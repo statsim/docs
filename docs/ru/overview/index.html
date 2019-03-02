@@ -17,28 +17,19 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
         <!-- Style Meta Data -->
-        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/style.css" type="text/css"/>
-        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="/ru/../theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="/ru/../theme/css/pygments.css" type="text/css"/>
 
         <!-- Feed Meta Data -->
-            <link href="https://statsim.com/docs/ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-                  title="Справочник StatSim ATOM Feed"/>
 
         <!-- Twitter Feed -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="">
+        <meta name="twitter:site" content="statsimcom">
         <meta name="twitter:image" content="">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7770107-2"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-7770107-2');
-        </script>
 
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/ru/overview/">
+
+    <meta name="twitter:creator" content="statsimcom">
+    <meta name="twitter:url" content="/ru/overview/">
     <meta name="twitter:title" content="Справочник StatSim ~ Overview">
     <meta name="twitter:description" content="Обзор">
 
@@ -51,16 +42,14 @@
 <body>
 <!-- Sidebar -->
 <aside>
-    <a href="https://statsim.com/docs/ru/../theme/../">
-      <img src="https://statsim.com/docs/ru/../theme/images/statsim-logo.png" class="logo">
+    <a href="/ru">
+      <img src="/images/logo.png" class="logo">
     </a>
-    <!--<center><a href="https://statsim.com/docs/ru"><img id="avatar" src=""></a></center>-->
     <h1>Справочник StatSim</h1>
-    <a href="https://statsim.com/docs/ru/../theme/../">English</>
+    <a href="/">English</a>
     <br>
-    <a href="https://statsim.com/docs/ru/../theme/../ru/">Russian</>
+    <a href="/ru/">Russian</a>
     <br>
-
 
     <nav class="nav">
         <ul class="list-bare">
@@ -72,19 +61,39 @@
 
     <p class="social">
                 <a href="https://twitter.com/statsimcom" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/twitter.png"></a>
+                        src="/ru/../theme/images/icons/twitter.png"></a>
                 <a href="https://www.facebook.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/facebook.png"></a>
+                        src="/ru/../theme/images/icons/facebook.png"></a>
                 <a href="https://github.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/github.png"></a>
-            <a href="https://statsim.com/docs/ru/feeds/all.atom.xml" rel="alternate">
-                <img src="https://statsim.com/docs/ru/../theme/images/icons/rss.png"></a>
+                        src="/ru/../theme/images/icons/github.png"></a>
     </p>
+
+        <a class="twitter-follow-button"
+           href="https://twitter.com/statsimcom"
+           data-show-count="false"
+           data-lang="en">
+            Follow @twitterdev
+        </a>
+        <script type="text/javascript">
+            window.twttr = (function (d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {
+                        _e: [], ready: function (f) {
+                            t._e.push(f)
+                        }
+                    });
+            }(document, "script", "twitter-wjs"));
+        </script>
 
         <h2>Categories</h2>
         <ul class="navbar">
                 <li class="active"><a
-                        href="https://statsim.com/docs/ru/category/overview/">Overview</a></li>
+                        href="/ru/category/overview/">Overview</a></li>
         </ul>
 
         <h2 class="blog_roll_link"><br/>LINKS</h2>
@@ -1256,7 +1265,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">iframer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./iframer&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1278,7 +1287,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="nx">iframer</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1297,8 +1306,10 @@ h6:hover .anchor-link {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-    <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
+    <div class="iframer-wrapper" style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
+      <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div><br>
+    <a class="iframer-link" href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22x%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%222%22%7D%2C%7B%22n%22%3A%22y%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%223%22%7D%2C%7B%22n%22%3A%22z%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22x%2By%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Sum%22%2C%22e%22%3A%22%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" target="_blank" style="margin: 10px 0;">Open in statsim.com</a>
   
 </div>
 
@@ -1322,7 +1333,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="nx">iframer</span><span class="p">(</span><span class="s1">&#39;http://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1341,26 +1352,15 @@ h6:hover .anchor-link {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-    <iframe src="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" width="900" height="600"></iframe><br>
-    <a href="http://192.168.0.102:8080/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" style="margin: 20px 0">Open in StatSim</a>
+    <div class="iframer-wrapper" style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
+      <iframe src="http://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div><br>
+    <a class="iframer-link" href="http://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22i%22%3A%22800%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Prey%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22Prey%20%2A%20PreyGrowthRate%20%20-%20Predator%20%2A%20ConsumeRate%20%2A%20Prey%22%7D%2C%7B%22i%22%3A%22100%22%2C%22h%22%3Atrue%2C%22n%22%3A%22Predator%22%2C%22sh%22%3Atrue%2C%22t%22%3A3%2C%22v%22%3A%22PredatorIncreaseRate%20%2A%20Prey%20%2A%20Predator%20-%20PredatorDeathRate%20%2A%20Predator%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PreyGrowthRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.049%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22ConsumeRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.00027%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorDeathRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.047%22%7D%2C%7B%22f%22%3Anull%2C%22n%22%3A%22PredatorIncreaseRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Afalse%2C%22v%22%3A%220.0001%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22PredatorPrey%22%2C%22e%22%3A%22Simulation%20of%20predator-prey%20model%20using%20Lotka-Voltera%20equations.%22%2C%22s%22%3A%22700%22%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A%22%22%7D%7D%5D" target="_blank" style="margin: 10px 0;">Open in statsim.com</a>
   
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -1400,10 +1400,10 @@ h6:hover .anchor-link {
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/ru/author/anton-zemlianskii/">Антон Землянский</a>
+                <a href="/ru/author/anton-zemlianskii/">Антон Землянский</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/ru/category/overview/" rel="bookmark" title="Permalink to Overview">
+                  <a href="/ru/category/overview/" rel="bookmark" title="Permalink to Overview">
                     Overview
                   </a>
                 </span>
@@ -1416,5 +1416,12 @@ h6:hover .anchor-link {
 <!-- Footer -->
 
 
+<!-- Hide code blocks with specific words -->
+<script>
+  Array
+    .from(document.querySelectorAll('div.input'))
+    .filter(node => /(\/\/\/|\#\#\#|iframer)/i.test(node.innerHTML))
+    .forEach(node => node.style.display = 'none')
+</script>
 </body>
 </html>

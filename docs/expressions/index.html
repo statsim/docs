@@ -17,28 +17,19 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
         <!-- Style Meta Data -->
-        <link rel="stylesheet" href="https://statsim.com/docs/theme/css/style.css" type="text/css"/>
-        <link rel="stylesheet" href="https://statsim.com/docs/theme/css/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css"/>
 
         <!-- Feed Meta Data -->
-            <link href="https://statsim.com/docs/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-                  title="StatSim Documentation ATOM Feed"/>
 
         <!-- Twitter Feed -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="">
+        <meta name="twitter:site" content="statsimcom">
         <meta name="twitter:image" content="">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7770107-2"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-7770107-2');
-        </script>
 
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/expressions/">
+
+    <meta name="twitter:creator" content="statsimcom">
+    <meta name="twitter:url" content="/expressions/">
     <meta name="twitter:title" content="StatSim Documentation ~ 2.3 Expressions">
     <meta name="twitter:description" content="Make calculations with expression blocks, process arrays and tensors, conditional expressions, JavaScript.">
 
@@ -51,16 +42,14 @@
 <body>
 <!-- Sidebar -->
 <aside>
-    <a href="https://statsim.com/docs/theme/../">
-      <img src="https://statsim.com/docs/theme/images/statsim-logo.png" class="logo">
+    <a href="">
+      <img src="/images/logo.png" class="logo">
     </a>
-    <!--<center><a href="https://statsim.com/docs"><img id="avatar" src=""></a></center>-->
     <h1>StatSim Documentation</h1>
-    <a href="https://statsim.com/docs/theme/../">English</>
+    <a href="/">English</a>
     <br>
-    <a href="https://statsim.com/docs/theme/../ru/">Russian</>
+    <a href="/ru/">Russian</a>
     <br>
-
 
     <nav class="nav">
         <ul class="list-bare">
@@ -72,25 +61,45 @@
 
     <p class="social">
                 <a href="https://twitter.com/statsimcom" target="_blank"><img
-                        src="https://statsim.com/docs/theme/images/icons/twitter.png"></a>
+                        src="/theme/images/icons/twitter.png"></a>
                 <a href="https://www.facebook.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/theme/images/icons/facebook.png"></a>
+                        src="/theme/images/icons/facebook.png"></a>
                 <a href="https://github.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/theme/images/icons/github.png"></a>
-            <a href="https://statsim.com/docs/feeds/all.atom.xml" rel="alternate">
-                <img src="https://statsim.com/docs/theme/images/icons/rss.png"></a>
+                        src="/theme/images/icons/github.png"></a>
     </p>
+
+        <a class="twitter-follow-button"
+           href="https://twitter.com/statsimcom"
+           data-show-count="false"
+           data-lang="en">
+            Follow @twitterdev
+        </a>
+        <script type="text/javascript">
+            window.twttr = (function (d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {
+                        _e: [], ready: function (f) {
+                            t._e.push(f)
+                        }
+                    });
+            }(document, "script", "twitter-wjs"));
+        </script>
 
         <h2>Categories</h2>
         <ul class="navbar">
                 <li class="active"><a
-                        href="https://statsim.com/docs/category/deterministic-models/">Deterministic models</a></li>
+                        href="/category/deterministic-models/">Deterministic models</a></li>
                 <li><a
-                        href="https://statsim.com/docs/category/inference/">Inference</a></li>
+                        href="/category/inference/">Inference</a></li>
                 <li><a
-                        href="https://statsim.com/docs/category/overview/">Overview</a></li>
+                        href="/category/overview/">Overview</a></li>
                 <li><a
-                        href="https://statsim.com/docs/category/stochastic-modeling/">Stochastic modeling</a></li>
+                        href="/category/stochastic-modeling/">Stochastic modeling</a></li>
         </ul>
 
         <h2 class="blog_roll_link"><br/>LINKS</h2>
@@ -1262,7 +1271,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">iframer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./iframer&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1325,10 +1334,10 @@ $$MonthlyRate = \frac{AnnualRate}{12 \times 100}$$<p>So, in our model we should 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22Principal%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22200000%22%7D%2C%7B%22n%22%3A%22AnnualRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%229%22%7D%2C%7B%22n%22%3A%22Term%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22360%22%7D%2C%7B%22n%22%3A%22MonthlyRate%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22AnnualRate%20%2F%20%2812%20%2A%20100%29%22%7D%2C%7B%22n%22%3A%22Pow%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.pow%281%20%2B%20MonthlyRate%2C%20Term%29%22%7D%2C%7B%22n%22%3A%22Payment%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Principal%20%2A%20MonthlyRate%20%2A%20%20Pow%20%2F%20%28Pow%20-%201%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Mortgage%20Calculator%22%2C%22e%22%3A%22Monthly%20payment%20calculator%20for%20a%20fixed%20rate%20mortgage.%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="nx">iframer</span><span class="p">(</span><span class="s1">&#39;https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22Principal%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22200000%22%7D%2C%7B%22n%22%3A%22AnnualRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%229%22%7D%2C%7B%22n%22%3A%22Term%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22360%22%7D%2C%7B%22n%22%3A%22MonthlyRate%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22AnnualRate%20%2F%20%2812%20%2A%20100%29%22%7D%2C%7B%22n%22%3A%22Pow%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.pow%281%20%2B%20MonthlyRate%2C%20Term%29%22%7D%2C%7B%22n%22%3A%22Payment%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Principal%20%2A%20MonthlyRate%20%2A%20%20Pow%20%2F%20%28Pow%20-%201%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Mortgage%20Calculator%22%2C%22e%22%3A%22Monthly%20payment%20calculator%20for%20a%20fixed%20rate%20mortgage.%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1341,16 +1350,16 @@ $$MonthlyRate = \frac{AnnualRate}{12 \times 100}$$<p>So, in our model we should 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-    <div style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
+    <div class="iframer-wrapper" style="position: relative; padding-bottom: 550px; padding-top: 25px; height: 0;">
       <iframe src="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22Principal%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22200000%22%7D%2C%7B%22n%22%3A%22AnnualRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%229%22%7D%2C%7B%22n%22%3A%22Term%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22360%22%7D%2C%7B%22n%22%3A%22MonthlyRate%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22AnnualRate%20%2F%20%2812%20%2A%20100%29%22%7D%2C%7B%22n%22%3A%22Pow%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.pow%281%20%2B%20MonthlyRate%2C%20Term%29%22%7D%2C%7B%22n%22%3A%22Payment%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Principal%20%2A%20MonthlyRate%20%2A%20%20Pow%20%2F%20%28Pow%20-%201%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Mortgage%20Calculator%22%2C%22e%22%3A%22Monthly%20payment%20calculator%20for%20a%20fixed%20rate%20mortgage.%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div><br>
-    <a href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22Principal%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22200000%22%7D%2C%7B%22n%22%3A%22AnnualRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%229%22%7D%2C%7B%22n%22%3A%22Term%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22360%22%7D%2C%7B%22n%22%3A%22MonthlyRate%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22AnnualRate%20%2F%20%2812%20%2A%20100%29%22%7D%2C%7B%22n%22%3A%22Pow%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.pow%281%20%2B%20MonthlyRate%2C%20Term%29%22%7D%2C%7B%22n%22%3A%22Payment%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Principal%20%2A%20MonthlyRate%20%2A%20%20Pow%20%2F%20%28Pow%20-%201%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Mortgage%20Calculator%22%2C%22e%22%3A%22Monthly%20payment%20calculator%20for%20a%20fixed%20rate%20mortgage.%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" style="margin: 10px 0">Open in StatSim</a>
+    <a class="iframer-link" href="https://statsim.com/app/?a=%5B%7B%22b%22%3A%5B%7B%22n%22%3A%22Principal%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22200000%22%7D%2C%7B%22n%22%3A%22AnnualRate%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%229%22%7D%2C%7B%22n%22%3A%22Term%22%2C%22sh%22%3Afalse%2C%22t%22%3A2%2C%22u%22%3Atrue%2C%22dims%22%3A%22%22%2C%22v%22%3A%22360%22%7D%2C%7B%22n%22%3A%22MonthlyRate%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22AnnualRate%20%2F%20%2812%20%2A%20100%29%22%7D%2C%7B%22n%22%3A%22Pow%22%2C%22h%22%3Afalse%2C%22sh%22%3Afalse%2C%22t%22%3A1%2C%22v%22%3A%22Math.pow%281%20%2B%20MonthlyRate%2C%20Term%29%22%7D%2C%7B%22n%22%3A%22Payment%22%2C%22h%22%3Afalse%2C%22sh%22%3Atrue%2C%22t%22%3A1%2C%22v%22%3A%22Principal%20%2A%20MonthlyRate%20%2A%20%20Pow%20%2F%20%28Pow%20-%201%29%22%7D%5D%2C%22mod%22%3A%7B%22n%22%3A%22Mortgage%20Calculator%22%2C%22e%22%3A%22Monthly%20payment%20calculator%20for%20a%20fixed%20rate%20mortgage.%22%2C%22s%22%3A1%2C%22m%22%3A%22deterministic%22%7D%2C%22met%22%3A%7B%22sm%22%3A1000%7D%7D%5D" target="_blank" style="margin: 10px 0;">Open in statsim.com</a>
   
 </div>
 
@@ -1416,19 +1425,6 @@ Read about conditional (ternary) operator <a href="https://developer.mozilla.org
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
  
 
 
@@ -1464,10 +1460,10 @@ Read about conditional (ternary) operator <a href="https://developer.mozilla.org
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/author/anton-zemlyansky/">Anton Zemlyansky</a>
+                <a href="/author/anton-zemlyansky/">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/category/deterministic-models/" rel="bookmark" title="Permalink to Deterministic models">
+                  <a href="/category/deterministic-models/" rel="bookmark" title="Permalink to Deterministic models">
                     Deterministic models
                   </a>
                 </span>
@@ -1480,5 +1476,12 @@ Read about conditional (ternary) operator <a href="https://developer.mozilla.org
 <!-- Footer -->
 
 
+<!-- Hide code blocks with specific words -->
+<script>
+  Array
+    .from(document.querySelectorAll('div.input'))
+    .filter(node => /(\/\/\/|\#\#\#|iframer)/i.test(node.innerHTML))
+    .forEach(node => node.style.display = 'none')
+</script>
 </body>
 </html>

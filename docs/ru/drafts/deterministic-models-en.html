@@ -17,28 +17,19 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
         <!-- Style Meta Data -->
-        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/style.css" type="text/css"/>
-        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/pygments.css" type="text/css"/>
+        <link rel="stylesheet" href="/ru/../theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="/ru/../theme/css/pygments.css" type="text/css"/>
 
         <!-- Feed Meta Data -->
-            <link href="https://statsim.com/docs/ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-                  title="Справочник StatSim ATOM Feed"/>
 
         <!-- Twitter Feed -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="">
+        <meta name="twitter:site" content="statsimcom">
         <meta name="twitter:image" content="">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7770107-2"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-7770107-2');
-        </script>
 
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="https://statsim.com/docs/ru/drafts/deterministic-models-en.html">
+
+    <meta name="twitter:creator" content="statsimcom">
+    <meta name="twitter:url" content="/ru/drafts/deterministic-models-en.html">
     <meta name="twitter:title" content="Справочник StatSim ~ 2.0 Deterministic models">
     <meta name="twitter:description" content="What is modeling, deterministic models, how to design effective models">
 
@@ -51,16 +42,14 @@
 <body>
 <!-- Sidebar -->
 <aside>
-    <a href="https://statsim.com/docs/ru/../theme/../">
-      <img src="https://statsim.com/docs/ru/../theme/images/statsim-logo.png" class="logo">
+    <a href="/ru">
+      <img src="/images/logo.png" class="logo">
     </a>
-    <!--<center><a href="https://statsim.com/docs/ru"><img id="avatar" src=""></a></center>-->
     <h1>Справочник StatSim</h1>
-    <a href="https://statsim.com/docs/ru/../theme/../">English</>
+    <a href="/">English</a>
     <br>
-    <a href="https://statsim.com/docs/ru/../theme/../ru/">Russian</>
+    <a href="/ru/">Russian</a>
     <br>
-
 
     <nav class="nav">
         <ul class="list-bare">
@@ -72,19 +61,39 @@
 
     <p class="social">
                 <a href="https://twitter.com/statsimcom" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/twitter.png"></a>
+                        src="/ru/../theme/images/icons/twitter.png"></a>
                 <a href="https://www.facebook.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/facebook.png"></a>
+                        src="/ru/../theme/images/icons/facebook.png"></a>
                 <a href="https://github.com/statsim" target="_blank"><img
-                        src="https://statsim.com/docs/ru/../theme/images/icons/github.png"></a>
-            <a href="https://statsim.com/docs/ru/feeds/all.atom.xml" rel="alternate">
-                <img src="https://statsim.com/docs/ru/../theme/images/icons/rss.png"></a>
+                        src="/ru/../theme/images/icons/github.png"></a>
     </p>
+
+        <a class="twitter-follow-button"
+           href="https://twitter.com/statsimcom"
+           data-show-count="false"
+           data-lang="en">
+            Follow @twitterdev
+        </a>
+        <script type="text/javascript">
+            window.twttr = (function (d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {
+                        _e: [], ready: function (f) {
+                            t._e.push(f)
+                        }
+                    });
+            }(document, "script", "twitter-wjs"));
+        </script>
 
         <h2>Categories</h2>
         <ul class="navbar">
                 <li><a
-                        href="https://statsim.com/docs/ru/category/overview/">Overview</a></li>
+                        href="/ru/category/overview/">Overview</a></li>
         </ul>
 
         <h2 class="blog_roll_link"><br/>LINKS</h2>
@@ -1256,7 +1265,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">open</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./open&#39;</span><span class="p">)</span>
+<div class=" highlight hl-javascript"><pre><span class="kd">var</span> <span class="nx">iframer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./iframer&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1348,10 +1357,10 @@ h6:hover .anchor-link {
             </div>
             <div class="post_list">
                 <span>By </span>
-                <a href="https://statsim.com/docs/ru/author/anton-zemlyansky/">Anton Zemlyansky</a>
+                <a href="/ru/author/anton-zemlyansky/">Anton Zemlyansky</a>
                 <span> in </span>
                 <span class="post_category">
-                  <a href="https://statsim.com/docs/ru/category/deterministic-models/" rel="bookmark" title="Permalink to Deterministic models">
+                  <a href="/ru/category/deterministic-models/" rel="bookmark" title="Permalink to Deterministic models">
                     Deterministic models
                   </a>
                 </span>
@@ -1364,5 +1373,12 @@ h6:hover .anchor-link {
 <!-- Footer -->
 
 
+<!-- Hide code blocks with specific words -->
+<script>
+  Array
+    .from(document.querySelectorAll('div.input'))
+    .filter(node => /(\/\/\/|\#\#\#|iframer)/i.test(node.innerHTML))
+    .forEach(node => node.style.display = 'none')
+</script>
 </body>
 </html>
