@@ -22,5 +22,4 @@ A possible solution to this problem is loading files piece by piece. That makes 
 
 ## Preview files in StatSim.Preview
 
-
 *StatSim.Preview* is a simple web application. Just open a text-based file clicking the `Browse` button, or drag-and-drop it from a local folder. That will load only a small piece of the selected file and display its content in the main window. Scroll a page to load more text blocks or click the `Load all` button to load the complete file into memory.
