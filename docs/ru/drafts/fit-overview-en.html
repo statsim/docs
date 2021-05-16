@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>Fitting machine learning models</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="StatSim documentation specifies user interface and describes how to build and fit various models">
+        <meta name="author" content="">
+
+        <link rel="shortcut icon" href="">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="Справочник StatSim">
+        <meta itemprop="image" content="">
+        <meta itemprop="description" content="StatSim documentation specifies user interface and describes how to build and fit various models">
+
+        <!-- Font -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://statsim.com/docs/ru/../theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="https://statsim.com/docs/ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="Справочник StatSim ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:image" content="">
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7770107-2"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-7770107-2');
+          </script>
+
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:url" content="https://statsim.com/docs/ru/drafts/fit-overview-en.html">
+    <meta name="twitter:title" content="Справочник StatSim ~ Fitting machine learning models">
+    <meta name="twitter:description" content="Learn how to train a Machine Learning model online and make predictions using your browser. Making predictions has never been easier!">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="Справочник StatSim ~ Fitting machine learning models"/>
+    <meta property="og:description" content="Learn how to train a Machine Learning model online and make predictions using your browser. Making predictions has never been easier!"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <a href="https://statsim.com/docs/">
+      <img src="https://statsim.com/docs/images/logo.png" class="logo">
+    </a>
+    <h1>Справочник StatSim</h1>
+    <a href="https://statsim.com/docs/">En</a> - <a href="https://statsim.com/docs/ru/">Ru</a>
+
+    <nav class="nav">
+        <ul class="list-bare">
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://twitter.com/statsimcom" target="_blank"><img
+                        src="https://statsim.com/docs/ru/../theme/images/icons/twitter.png"></a>
+                <a href="https://www.facebook.com/statsim" target="_blank"><img
+                        src="https://statsim.com/docs/ru/../theme/images/icons/facebook.png"></a>
+                <a href="https://github.com/statsim" target="_blank"><img
+                        src="https://statsim.com/docs/ru/../theme/images/icons/github.png"></a>
+            <a href="https://statsim.com/docs/ru/feeds/all.atom.xml" rel="alternate">
+                <img src="https://statsim.com/docs/ru/../theme/images/icons/rss.png"></a>
+    </p>
+
+
+        <h2>Categories</h2>
+        <ul class="navbar">
+                <li><a
+                        href="https://statsim.com/docs/ru/category/statsim/">StatSim</a></li>
+        </ul>
+
+
+</aside>
+
+<!-- Content -->
+<article>
+    <section id="content">
+        <article>
+            <h2 class="post_title post_detail">
+              Fitting machine learning models
+            </h2>
+            <div class="entry-content blog-post">
+              <div class="post-summary">
+                <p>Learn how to train a Machine Learning model online and make predictions using your browser. Making predictions has never been easier!</p>
+              </div>
+              <div class="yt"><iframe width="560" height="315" src="https://www.youtube.com/embed/CkdfXu6Hxpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<h2>Overview</h2>
+<p>People use Machine Learning to solve different types of problems. One of its most common applications is prediction. Given some independent observations (usually represented as rows in a table) the task is to predict target values for future observations. To make this prediction a model is trained on seen data (training set). Such data consists of a target variable and predictors, sometimes called features. Features are basically columns used to predict target values. Fitting (training) a model means finding relationship between features and targets. A dataset used for predictions should contain features same as in the training dataset.</p>
+<h2>How to fit a model</h2>
+<p>Previously fitting a model required using a programming language like <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> or <a href="https://en.wikipedia.org/wiki/R_(programming_language)">R</a>. Today there are a lot of web-based tools that provide similar functionality using only a graphical user interface. The only problem with those tools is they require data to be transferred and stored somewhere in the <em>cloud</em>. In most cases that means extra registration steps, fees and security issues. 
+With <a href="statsim.com/fit/">StatSim.Fit</a> you can fit machine learning models online using your machine's resources. That means data is processed locally, no need for registration, and the tool is free.</p>
+<p>To fit a model:</p>
+<ol>
+<li>Select a training dataset in the CSV format</li>
+<li>Select a dataset for prediction</li>
+<li>Choose a target variable (the variable you want to predict)</li>
+<li>Select and customize a model</li>
+<li>Click <em>Run</em></li>
+</ol>
+<p>That's all!</p>
+
+            </div>
+
+
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+
+
+<!-- Hide code blocks with specific words -->
+<script>
+  Array
+    .from(document.querySelectorAll('div.input'))
+    .filter(node => /(\/\/\/|\#\#\#|iframer)/i.test(node.innerHTML))
+    .forEach(node => node.style.display = 'none')
+</script>
+</body>
+</html>

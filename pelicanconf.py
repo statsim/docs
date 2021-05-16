@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from pelican_jupyter import markup as nb_markup
 
-AUTHOR = u'Anton Zemlyansky'
+#AUTHOR = u'Anton Zemlyansky'
 SITENAME = u'StatSim Documentation'
-
+DESCRIPTION = 'StatSim documentation specifies user interface and describes how to build and fit various models'
 SITEURL = ''
 BASEURL = ''
 
@@ -25,10 +26,10 @@ AUTHOR_FEED_RSS = None
 
 
 # Blogroll
-LINKS = (
-  ('StatSim', 'https://statsim.com/'),
-  ('Analyze.li', 'https://analyze.li')
-)
+# LINKS = (
+#   ('StatSim', 'https://statsim.com/'),
+#   ('Analyze.li', 'https://analyze.li')
+# )
 
 # Social widget
 SOCIAL = (
@@ -37,20 +38,25 @@ SOCIAL = (
   ('Github', 'https://github.com/statsim')
 )
 
-PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['i18n_subsites', 'ipynb.markup']
+PLUGIN_PATHS = ['/home/anton/tools/pelican-plugins']
+# PLUGINS = ['i18n_subsites', 'ipynb.markup']
+
+MARKUP = ("md", "ipynb")
+PLUGINS = ['i18n_subsites', nb_markup]
+
 I18N_SUBSITES = {
   'ru': {
     'SITENAME': 'Справочник StatSim'
   }
 }
 
-IGNORE_FILES = ['*-checkpoint.ipynb', '*.md', '*.html']
+IGNORE_FILES = ['*-checkpoint.ipynb', '.ipynb_checkpoints']
 
 THEME = 'theme'
 DISPLAY_FOOTER = False
 DISPLAY_SUMMARY = True
-ARTICLE_ORDER_BY = 'filename'
+ARTICLE_ORDER_BY = 'basename'
+PAGE_ORDER_BY = 'basename'
 DEFAULT_PAGINATION = False
 
 ARTICLE_URL = '{slug}/'
@@ -72,7 +78,7 @@ TAGS_SAVE_AS = 'tag/index.html'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-TWITTER_USERNAME = 'statsimcom'
+# TWITTER_USERNAME = 'statsimcom'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

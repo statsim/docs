@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>StatSim Documentation - Fit</title><link href="https://statsim.com/docs/" rel="alternate"></link><link href="https://statsim.com/docs/feeds/fit.atom.xml" rel="self"></link><id>https://statsim.com/docs/</id><updated>2021-04-07T20:00:00+02:00</updated><entry><title>Fitting machine learning models</title><link href="https://statsim.com/docs/fit-overview/" rel="alternate"></link><published>2021-04-07T20:00:00+02:00</published><updated>2021-04-07T20:00:00+02:00</updated><author><name></name></author><id>tag:statsim.com,2021-04-07:/docs/fit-overview/</id><summary type="html">&lt;p&gt;Learn how to train a Machine Learning model online and make predictions using your browser. Making predictions has never been easier!&lt;/p&gt;</summary><content type="html">&lt;div class="yt"&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/CkdfXu6Hxpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;p&gt;People use Machine Learning to solve different types of problems. One of its most common applications is prediction. Given some independent observations (usually represented as rows in a table) the task is to predict target values for future observations. To make this prediction a model is trained on seen data (training set). Such data consists of a target variable and predictors, sometimes called features. Features are basically columns used to predict target values. Fitting (training) a model means finding relationship between features and targets. A dataset used for predictions should contain features same as in the training dataset.&lt;/p&gt;
+&lt;h2&gt;How to fit a model&lt;/h2&gt;
+&lt;p&gt;Previously fitting a model required using a programming language like &lt;a href="https://en.wikipedia.org/wiki/Python_(programming_language)"&gt;Python&lt;/a&gt; or &lt;a href="https://en.wikipedia.org/wiki/R_(programming_language)"&gt;R&lt;/a&gt;. Today there are a lot of web-based tools that provide similar functionality using only a graphical user interface. The only problem with those tools is they require data to be transferred and stored somewhere in the &lt;em&gt;cloud&lt;/em&gt;. In most cases that means extra registration steps, fees and security issues. 
+With &lt;a href="statsim.com/fit/"&gt;StatSim.Fit&lt;/a&gt; you can fit machine learning models online using your machine's resources. That means data is processed locally, no need for registration, and the tool is free.&lt;/p&gt;
+&lt;p&gt;To fit a model:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Select a training dataset in the CSV format&lt;/li&gt;
+&lt;li&gt;Select a dataset for prediction&lt;/li&gt;
+&lt;li&gt;Choose a target variable (the variable you want to predict)&lt;/li&gt;
+&lt;li&gt;Select and customize a model&lt;/li&gt;
+&lt;li&gt;Click &lt;em&gt;Run&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That's all!&lt;/p&gt;</content><category term="Fit"></category></entry></feed>

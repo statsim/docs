@@ -2,6 +2,6 @@ Title: 2.2 Data
 Slug: data
 Lang: en
 Date: 2018-10-23 20:00
-Category: Deterministic models
+Category: StatSim
 Author: Anton Zemlyansky
 Summary: How to load data into a model, edit it using a table view, use data as a model input, as a constant, show it in output and analyze results

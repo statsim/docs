@@ -2,6 +2,6 @@ Title: 2.4 Iterations and accumulators
 Slug: accumulators
 Lang: en
 Date: 2018-10-27 20:00
-Category: Deterministic models
+Category: StatSim
 Author: Anton Zemlyansky
 Summary: Create models that change in time, accumulate values, track changes with time-series charts. 

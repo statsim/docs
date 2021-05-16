@@ -21,6 +21,11 @@ h2.post_detail, .post-summary {
   color: #8c8c96;
 }
 
+.next-post {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
 .twitter-follow-button {
   display: block;
   margin: 15px auto;
@@ -44,7 +49,7 @@ article code {
 }
 
 .latest
-{-
+{
   padding: 10px 10px;
   border-bottom: 1px solid #eee;
 }
@@ -72,6 +77,11 @@ article section .about
 article section .blog-post
 {
   font-size: 16px;
+}
+
+article section .blog-post h2
+{
+  margin-top: 40px;
 }
 
 /* Body */
@@ -127,17 +137,32 @@ article > header {
 }
 
 a {
-  color: #9f9da4;
-  text-decoration:none;
+  color: #006fc9;
+  text-decoration: none;
 }
 
 a:hover {
   color: #008ACC;
-  text-decoration:none;
+  text-decoration: underline;
 }
 
 
 /* Code */
+div.input_area {
+  background: #eeeef1 !important;
+  border-radius: 5px !important;
+  padding: 5px !important;
+  border: none !important;
+}
+
+div.output_area {
+  background: #fff !important;
+  box-shadow: 0 0 10px #DADADA !important;
+  border-radius: 5px !important;
+  margin-top: 10px !important;
+  padding: 4px !important;
+}
+
 .highlight pre {
   font-size: 14px;
   overflow: auto;
@@ -146,17 +171,17 @@ a:hover {
 
 /* Sidebar */
 aside {
-  font-size: 14px;
-  width: 220px; height: 100%;
-  position: fixed;
-  top: 0; left: 0;
-  padding: 30px;
   background-color: white;
-  box-shadow: 0 0 50px #DDD;
-  color: #222;
-  text-align: center;
-  padding-top: 1%;
   background-size: cover;
+  border-right: 1px solid #ECECEC;
+  color: #222;
+  font-size: 14px;
+  padding-top: 1%;
+  padding: 30px;
+  position: fixed;
+  text-align: center;
+  top: 0; left: 0;
+  width: 220px; height: 100%;
 }
 
 aside > ul {
@@ -248,6 +273,60 @@ aside .logo {
   padding: 0.33147rem 0;
 } 
 
+/* Table */
+
+/*
+.output table, .output tr, .output td, .output th, .output thead, .output tbody {
+  border: 1px solid #EFEFEF;
+  background-color: white;
+  margin: 0;
+}
+*/
+
+.output table {
+    margin-top: 0 !important;
+    font-family: sans-serif;
+    font-size:10px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #C8C8C8;
+    border-collapse: collapse;
+}
+.output table th {
+    border-width: 1px;
+    padding: 5px 8px;
+    border-style: solid;
+    border-color: #C8C8C8;
+    background-color: #EEEEF1;
+}
+.output table td {
+    border-width: 1px;
+    padding: 5px 8px;
+    border-style: solid;
+    border-color: #D3D3D3;
+    background-color: #ffffffa;
+}
+
+/* Video wrapper (responsive) */
+.yt {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.yt::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.yt iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /*--------Responsive------------*/
 
@@ -261,6 +340,7 @@ aside .logo {
     width: 100%;
     padding: 0;
     padding-top: 1px;
+    border-bottom: 1px solid #ECECEC;
   }
 
   .nav

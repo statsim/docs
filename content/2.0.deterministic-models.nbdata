@@ -1,7 +1,8 @@
-Title: 2.0 Deterministic models
-Slug: deterministic-models
-Lang: en
-Date: 2018-10-29 20:00
-Category: Deterministic models
-Author: Anton Zemlyansky
-Summary: What is modeling, deterministic models, how to design effective models
+title: Deterministic models
+num: 2
+slug: deterministic-models
+lang: en
+date: 2018-10-29 20:00
+category: StatSim
+author: Anton Zemlyansky
+summary: What is modeling, deterministic models, how to design effective models

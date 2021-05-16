@@ -1,7 +1,8 @@
-Title: 1.0 Overview
-Slug: overview
-Lang: en
-Date: 2018-09-15 20:00
-Category: Overview
-Author: Anton Zemlyansky
-Summary: Overview of StatSim
+title: StatSim overview
+num: 1
+slug: overview
+lang: en
+date: 2018-09-15 20:00
+category: StatSim
+author: Anton Zemlyansky
+summary: Learn how StatSim works and how to build a simple model using main building blocks (data block, random variable, expression and other)

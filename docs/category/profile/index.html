@@ -1,21 +1,23 @@
 <!doctype html>
-<html lang="en" itemscope itemtype="http://schema.org/Person">
+<html lang="en">
 <head>
                 <meta charset="utf-8">
         <!-- Site Meta Data -->
-        <title>StatSim Documentation - Inference</title>
+        <title>StatSim Documentation - Profile</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="Anton Zemlyansky">
+        <meta name="description" content="StatSim documentation specifies user interface and describes how to build and fit various models">
+        <meta name="author" content="">
 
         <link rel="shortcut icon" href="">
 
         <!-- schema.org -->
         <meta itemprop="name" content="StatSim Documentation">
         <meta itemprop="image" content="">
-        <meta itemprop="description" content="">
+        <meta itemprop="description" content="StatSim documentation specifies user interface and describes how to build and fit various models">
 
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Font -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
         <!-- Style Meta Data -->
         <link rel="stylesheet" href="https://statsim.com/docs/theme/css/style.css" type="text/css"/>
         <link rel="stylesheet" href="https://statsim.com/docs/theme/css/pygments.css" type="text/css"/>
@@ -26,7 +28,7 @@
 
         <!-- Twitter Feed -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="statsimcom">
+        <meta name="twitter:site" content="">
         <meta name="twitter:image" content="">
 
           <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,7 +40,7 @@
             gtag('config', 'UA-7770107-2');
           </script>
 
-    <meta name="twitter:creator" content="statsimcom">
+    <meta name="twitter:creator" content="">
     <meta name="twitter:url" content="https://statsim.com/docs">
     <meta name="twitter:title" content="StatSim Documentation">
     <meta name="twitter:description" content="">
@@ -48,34 +50,28 @@
     <meta property="og:description" content=""/>
     <meta property="og:image" content=""/>
 
-    <meta name="twitter:creator" content="statsimcom">
-    <meta name="twitter:url" content="https://statsim.com/docs/category/inference/">
-    <meta name="twitter:title" content="StatSim Documentation ~ Inference">
-    <meta name="twitter:description" content="Articles de Inference">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:url" content="https://statsim.com/docs/category/profile/">
+    <meta name="twitter:title" content="StatSim Documentation ~ Profile">
+    <meta name="twitter:description" content="Articles de Profile">
 
     <!-- Facebook Meta Data -->
-    <meta property="og:title" content="StatSim Documentation ~ Inference"/>
-    <meta property="og:description" content="Articles de Inference"/>
+    <meta property="og:title" content="StatSim Documentation ~ Profile"/>
+    <meta property="og:description" content="Articles de Profile"/>
     <meta property="og:image" content=""/>
 </head>
 
 <body>
 <!-- Sidebar -->
 <aside>
-    <a href="https://statsim.com/docs">
+    <a href="https://statsim.com/docs/">
       <img src="https://statsim.com/docs/images/logo.png" class="logo">
     </a>
     <h1>StatSim Documentation</h1>
-    <a href="https://statsim.com/docs/">English</a>
-    <br>
-    <a href="https://statsim.com/docs/ru/">Russian</a>
-    <br>
+    <a href="https://statsim.com/docs/">En</a> - <a href="https://statsim.com/docs/ru/">Ru</a>
 
     <nav class="nav">
         <ul class="list-bare">
-
-
-
         </ul>
     </nav>
 
@@ -90,45 +86,19 @@
                 <img src="https://statsim.com/docs/theme/images/icons/rss.png"></a>
     </p>
 
-        <a class="twitter-follow-button"
-           href="https://twitter.com/statsimcom"
-           data-show-count="false"
-           data-lang="en">
-            Follow @twitterdev
-        </a>
-        <script type="text/javascript">
-            window.twttr = (function (d, s, id) {
-                var t, js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "https://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-                return window.twttr || (t = {
-                        _e: [], ready: function (f) {
-                            t._e.push(f)
-                        }
-                    });
-            }(document, "script", "twitter-wjs"));
-        </script>
 
         <h2>Categories</h2>
         <ul class="navbar">
                 <li><a
-                        href="https://statsim.com/docs/category/deterministic-models/">Deterministic models</a></li>
+                        href="https://statsim.com/docs/category/fit/">Fit</a></li>
+                <li><a
+                        href="https://statsim.com/docs/category/preview/">Preview</a></li>
                 <li class="active"><a
-                        href="https://statsim.com/docs/category/inference/">Inference</a></li>
+                        href="https://statsim.com/docs/category/profile/">Profile</a></li>
                 <li><a
-                        href="https://statsim.com/docs/category/overview/">Overview</a></li>
-                <li><a
-                        href="https://statsim.com/docs/category/stochastic-modeling/">Stochastic modeling</a></li>
+                        href="https://statsim.com/docs/category/statsim/">StatSim</a></li>
         </ul>
 
-        <h2 class="blog_roll_link"><br/>LINKS</h2>
-        <ul class="navbar">
-                <li><a href="https://statsim.com/">StatSim</a></li>
-                <li><a href="https://analyze.li">Analyze.li</a></li>
-        </ul>
 
 </aside>
 
@@ -136,10 +106,13 @@
 <article>
         <ol class="posts">
                 <li class="post_list"><p class="post_entry">
-                    <h2 class="post_title"><a href="https://statsim.com/docs/bayesian-inference/" rel="bookmark"
-                                              title="Permalink to 4.0 Bayesian inference">4.0 Bayesian inference</a>
+                    <h2 class="post_title">
+                      <a href="https://statsim.com/docs/fast-data-profiling/" rel="bookmark" title="Permalink to Fast data profiling in your browser">
+                          <span class="article-num">1</span>
+                        Fast data profiling in your browser
+                      </a>
                     </h2>
-                        <p><p>Finding model parameters using Bayesian inference</p></p>
+                        <p><p>People are not really good at pattern recognition when dealing with raw tabular data. That's why data visualization and statistical summaries are used so often. Similarly, data profiling is used to get a bird-view summary of tabular datasets. It provides descriptive statistics about each column (variable) of the input dataset. With StatSim.Profile it's possible to perform data profiling online, just in the browser. Keep in mind that data is processed locally.</p></p>
                 </li>
         </ol>
 
